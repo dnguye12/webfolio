@@ -38,7 +38,7 @@ const projectList = [
 
 const Projects = () => {
   return (
-    <div id={SECTION_TYPE.PROJECTS} className="w-full mt-32 pt-40 relative">
+    <div id={SECTION_TYPE.PROJECTS} className="hidden w-full mt-32 pt-40 relative">
       <div
         className={classNames("w-full text-center text-6xl", MonotonFont.className)}
       >

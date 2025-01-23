@@ -2,36 +2,24 @@ import { useMemo } from "react"
 import { useInView } from "react-intersection-observer"
 import { SECTION_TYPE } from "../tabs/constants"
 
-import GithubSVG from "@/assets/icon/github.svg"
-import TwitterSVG from "@/assets/icon/twitter.svg"
-import GmailSVG from "@/assets/icon/gmail.svg"
-import TelegramSVG from "@/assets/icon/telegram.svg"
-import V2exSVG from "@/assets/icon/v2ex.svg"
 import Image from "next/image"
 
 import { BreeSerifFont } from "@/common/font"
 import classNames from "classnames"
+import { GithubIcon, Linkedin, Mail } from "lucide-react"
 
 const contactList = [
   {
-    icon: GithubSVG,
-    link: "https://github.com/LHRUN"
+    icon: <GithubIcon className="w-7 h-7"/>,
+    link: "https://github.com/dnguye12"
   },
   {
-    icon: TwitterSVG,
-    link: "https://twitter.com/Song_LongHao"
+    icon: <Mail className="w-7 h-7"/>,
+    email: "mailto:duchuyng051@gmail.com"
   },
   {
-    icon: GmailSVG,
-    email: "mailto:song.lhlh@gmail.com"
-  },
-  {
-    icon: TelegramSVG,
-    link: "https://twitter.com/Song_LongHao"
-  },
-  {
-    icon: V2exSVG,
-    link: "https://www.v2ex.com/member/LHRUN"
+    icon: <Linkedin className="w-7 h-7"/>,
+    email: "https://www.linkedin.com/in/duc-huy-nguyen-9392461bb/"
   },
 ]
 
@@ -98,7 +86,7 @@ const About = () => {
                 className="p-1 border-black rounded-lg border-2 cursor-pointer hover:scale-110 transition-all dark:border-white"
                 key={index}
               >
-                <item.icon className="w-7 h-7" />
+                {item.icon}
               </a>
             ))
           }
