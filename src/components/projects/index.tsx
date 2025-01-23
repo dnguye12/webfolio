@@ -6,39 +6,39 @@ import Image from "next/image"
 
 const projectList = [
   {
-    img: "/projects/paint-board.png",
-    title: "Paint Board",
-    link: "https://songlh.top/paint-board",
-    github: "https://github.com/LHRUN/paint-board",
-    desc: "Paint Board is a powerful WEB-based creative drawing board that integrates a variety of creative brushes and assistive drawing functions, allowing users to experience a new drawing effect. All the content is free, no login, instant use. At present, it has supported multiple terminals, whether it is mobile terminal, or PC terminal, all have better interactive experience and effect display.",
-    author: "Paint Board is the project that I have invested the most effort in outside of work. From the preliminary research, to the prototype design and technical solution, to the in-depth study of colour matching and user interaction in the design stage, and the operation and promotion in the later stage, this project has greatly improved my ability in all aspects. Since its launch, Paint Board has also gained a lot of attention, which gives me a great sense of achievement and confidence to carry on. \n You are more than welcome to try it out! If you have any ideas, or found any bugs, please feel free to contact me, we can discuss and improve it together."
+    img: "/projects/div.avif",
+    title: "Dividend Insight",
+    link: "Work in progress",
+    github: "",
+    desc: "Dividend Insight is a cutting-edge web application built and designed to provide comprehensive company stock information with price estimations, performance feedback and analysis. It features algorithms for stock performance analysis and interactive data visualization tools, offering users an intuitive financial insight experience.",
+    author: "Me"
   },
   {
-    img: "/projects/bubble.png",
-    title: "Bubble",
-    link: "https://bubble-awesome-profile.vercel.app",
-    github: "https://github.com/LHRUN/bubble",
-    desc: "Bubble is a platform dedicated to collecting GitHub Profile components, bringing together the coolest Profile and README components on GitHub. Users can log in, like and mark their favourite profiles. Currently, there are various styles of Profile components on the platform, which can satisfy the needs of different developers. If you don't have any inspiration at the moment, you can also check out other people's excellent configurations and presentations in the Profile tab for inspiration.",
-    author: "Bubble was the first project I worked on when I first got into full-stack, using a technology stack of Next.js + Prisma + PostgreSQL + NextAuth, in the hope that it would open up the world of full-stack as a first step into independent development."
+    img: "/projects/miro.png",
+    title: "Fullstack Miro Copy",
+    link: "https://miro-clone-liard.vercel.app/",
+    desc: "Fullstack Miro Copy is a real-time collaborative web application, designed to provide a seamless shared whiteboard experience. Whether for brainstorming sessions, creative projects, or team planning, this ensures an interactive and intuitive environment, empowering users to collaborate efficiently and in real time.",
+    author: "Me"
   },
   {
-    img: "/projects/md-editor.png",
-    title: "MD Editor",
-    link: "https://songlh.top/md-editor",
-    github: "https://github.com/LHRUN/md-editor",
-    desc: "md-editor is a markdown-it based markdown editor, including sync scrolling, multi file record,upload and download, generate toc, menu edit btn, code block theme switch, content state local cache..."
+    img: "/projects/discord.png",
+    title: "Fullstack Discord Copy",
+    link: "https://discord-backend-tlyr.onrender.com/",
+    desc: "Fullstack Discord Copy is a real-time communication platform, offering seamless real-time messaging, video and audio calls, and dedicated servers with isolated channels for organized communication. Key features include messaging, file and image uploads (supporting large files), and robust server and channel management tools. Fullstack Discord Copy provides a dynamic and user-friendly environment for connecting and communicating effectively.",
+    author: "Me"
   },
   {
-    img: "/projects/work.svg",
-    title: "My Work",
-    desc: "The above are open source projects that I develop in my spare time. At work, I am a front-end development engineer mainly responsible for C-end projects, focusing on media and e-commerce industry. My work involves multiple platforms, including PC, mobile, mini program and APP. Brands worked and served include Converse, Coach, UA, and DJCars.",
-    maxWidth: "170px"
-  }
+    img: "/projects/icremental-paradise.png",
+    title: "Increment Paradise",
+    link: "https://shop.incrementalparadise.com/",
+    desc: "Online store for a Minecraft server, allowing users to purchase ranks and upgrades. Features: an admin panel to manage website and products, login system for players, dynamic offers based on purchase history, databases to hold information on users and products and real-time updates synced with the Minecraft server",
+    author: "Me"
+  },
 ]
 
 const Projects = () => {
   return (
-    <div id={SECTION_TYPE.PROJECTS} className="hidden w-full mt-32 pt-40 relative">
+    <div id={SECTION_TYPE.PROJECTS} className="w-full mt-32 pt-40 relative">
       <div
         className={classNames("w-full text-center text-6xl", MonotonFont.className)}
       >
@@ -56,7 +56,7 @@ const Projects = () => {
             {
               projectList.map((project, index) => (
                 <div
-                  className="flex px-10 gap-x-4 relative py-12"
+                  className="flex px-8 gap-x-6 relative py-12"
                   key={index}
                   style={{
                     flexDirection: index % 2 === 0 ? "row" : "row-reverse",
@@ -69,19 +69,27 @@ const Projects = () => {
                     <Image
                       src={project.img}
                       className="w-full h-auto rounded-xl my-5 mx-auto hidden max-600:block dark:opacity-80"
-                      style={{
-                        maxWidth: project.maxWidth || "auto"
-                      }}
                       alt="projectImage"
-                      width={200}
-                      height={200}
-                    /> 
+                      width={480}
+                      height={480}
+                    />
 
                     {
                       project.link && (
                         <div className="text-base mt-2 flex">
                           <span className="font-semibold shrink-0 w-16">Link: </span>
-                          <Link href={project.link} />
+                          {
+                            project.link === "Work in progress"
+                              ?
+                              (
+                                <i>{project.link}</i>
+                              )
+                              :
+                              (
+                                <Link href={project.link} />
+                              )
+                          }
+
                         </div>
                       )
                     }
@@ -114,13 +122,10 @@ const Projects = () => {
                   <div className="w-1/2 h-fit shrink-0 sticky top-20 justify-center flex max-600:hidden dark:opacity-80">
                     <Image
                       src={project.img}
-                      width={200}
-                      height={200}
+                      width={480}
+                      height={480}
                       className="w-full h-fit rounded-xl"
                       alt="projectImg"
-                      style={{
-                        maxWidth: project.maxWidth || "auto"
-                      }}
                     />
                   </div>
                 </div>

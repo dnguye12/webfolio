@@ -74,7 +74,7 @@ const Tabs = () => {
           <a
             key={index}
             className={classNames(
-              `leading-8 w-24 flex items-center justify-center cursor-pointer z-10 transition-all duration-300 ${active === item ? "text-white" : "text-black"} hover:-translate-y-0.5`,
+              `leading-8 flex items-center justify-center cursor-pointer z-10 transition-all duration-300 ${active === item ? "text-white" : "text-black"} hover:-translate-y-0.5`,
               styles["tab-item"],
               BreeSerifFont.className
             )}
@@ -86,7 +86,7 @@ const Tabs = () => {
         ))
       }
       <div
-        className={classNames("absolute top-1 h-8 w-24 bg-[#000000] transition-all duration-300 rounded-3xl z-0", styles["tab-item-active"])}
+        className={classNames("absolute top-1 h-8 bg-[#000000] transition-all duration-300 rounded-3xl z-0", styles["tab-item-active"])}
       >
       </div>
 

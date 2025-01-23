@@ -64,7 +64,7 @@ const About = () => {
           src="/profile_cover.png"
           alt="profile"
           fill
-          className="w-full h-full absolute top-0 left-0 transition-all duration-300 group-hover:rotate-y-180"
+          className="w-full h-full absolute top-0 left-0 transition-all duration-300 group-hover:rotate-y-180 drop-shadow-md"
           style={{
             borderRadius: profileRadius
           }}
@@ -72,18 +72,18 @@ const About = () => {
       </div>
 
       <div
-        className={classNames("text-2xl spacing-word-1", BreeSerifFont.className)}
+        className={classNames("text-xl spacing-word-1", BreeSerifFont.className)}
         style={{
           wordSpacing: "0.25rem"
         }}
       >
-        <div className="flex items-center justify-center gap-x-3 mt-16 mb-10">
+        <div className="flex items-center justify-center gap-x-3 my-10">
           {
             contactList.map((item, index) => (
               <a
                 href={item.email || item.link}
                 target="_blank"
-                className="p-1 border-black rounded-lg border-2 cursor-pointer hover:scale-110 transition-all dark:border-white"
+                className="p-1 border-black rounded-lg border-2 cursor-pointer hover:scale-110 transition-all duration-150 dark:border-white"
                 key={index}
               >
                 {item.icon}
