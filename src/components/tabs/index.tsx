@@ -7,11 +7,11 @@ import { SECTION_TYPE } from "./constants"
 import LightSVG from "@/assets/icon/light.svg"
 import DarkSVG from "@/assets/icon/dark.svg"
 import { useTheme } from "@/context/theme"
-
+//SECTION_TYPE.EXPERIENCE,
 const tabs = [
   SECTION_TYPE.HOME,
   SECTION_TYPE.ABOUT,
-  SECTION_TYPE.EXPERIENCE,
+  
   SECTION_TYPE.PROJECTS,
   SECTION_TYPE.STACK
 ]
