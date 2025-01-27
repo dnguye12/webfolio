@@ -35,7 +35,7 @@ export default function Home() {
         vantaEffect.destroy()
       }
     }
-  })
+  }, [])
 
   return (
     <main className="relative w-screen h-screen flex justify-center items-center z-40">
@@ -66,6 +66,9 @@ export default function Home() {
       <Contact />
       <Button className="font-semibold rounded-full cursor-pointer transition hover:scale-105 absolute top-4 left-1/2 -translate-x-1/2 z-40" asChild>
         <Link href="/about">About Me</Link>
+      </Button>
+      <Button className="font-semibold rounded-full cursor-pointer transition hover:scale-105 absolute bottom-4 left-1/2 -translate-x-1/2 z-40" asChild>
+        <Link href="/projects">Projects</Link>
       </Button>
       <div id="homepage-background" ref={vantaRef} className="block w-full h-full absolute top-0 left-0 z-0" />
     </main>
