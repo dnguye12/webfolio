@@ -10,19 +10,24 @@ import Skills from "./components/skills";
 import Experience from "./components/experience";
 import Footer from "./components/footer";
 
-const About = () => {
+const AboutPage = () => {
     return (
         <SmoothScroll>
             <div className="flex min-h-screen flex-col z-40">
                 <Header />
                 <main className="flex-1 drop-shadow-md">
-                    <div className="px-4 sm:px-8 md:px-12 lg:px-16 2xl:px-24">
+                    <div className="hidden lg:block px-4 sm:px-8 md:px-12 lg:px-16 2xl:px-24">
                         <ImageHero />
+                    </div>
+                    <div className="block lg:hidden">
+                        <Hero />
                     </div>
                     <Separator className="bg-neutral-700" />
                     <AboutMe />
                     <Separator className="bg-neutral-700" />
-                    <Hero />
+                    <div className="hidden lg:block">
+                        <Hero />
+                    </div>
                     <Separator className="bg-neutral-700" />
                     <Skills />
                     <Separator className="bg-neutral-700" />
@@ -35,4 +40,4 @@ const About = () => {
     );
 }
 
-export default About;
+export default AboutPage;

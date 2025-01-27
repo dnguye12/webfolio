@@ -31,7 +31,7 @@ const Hero = () => {
 
     return (
         <section
-            className="relative w-full overflow-hidden bg-background pointer-events-none cursor-none"
+            className="hidden relative w-full overflow-hidden bg-background pointer-events-none cursor-none"
             ref={container}
         >
             <div className="relative h-[42.5dvh] md:h-[51.2dvh] md:min-h-[50dvh] xl:h-[61.2dvh]">

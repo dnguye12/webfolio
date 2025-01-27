@@ -1,41 +1,44 @@
-import {
-    Sheet,
-    SheetContent,
-    SheetDescription,
-    SheetHeader,
-    SheetTitle,
-    SheetTrigger,
-} from "@/components/ui/sheet"
 import { Button } from '@/components/ui/button';
 import { Separator } from "@/components/ui/separator"
-import { Menu } from 'lucide-react';
+import { Home, Settings } from 'lucide-react';
 import Link from 'next/link';
+import { ButtonTooltip } from "@/components/button-tooltip";
 
 const Header = () => {
     return (
         <div className='flex justify-between items-center h-16 px-8 border-b border-b-neutral-700 drop-shadow-md'>
-            <span className="text-md font-semibold">
+            <span className="hidden sm:block text-md font-semibold">
                 Nguyen Duc Huy
             </span>
+            <span className='block sm:hidden text-md font-semibold'>Huy</span>
 
-            <Sheet>
-                <SheetTrigger>
-                    <Button variant={"ghost"} className='text-md font-semibold'>
-                        Menu <Menu />
-                    </Button>
-                </SheetTrigger>
-                <SheetContent className="border-l-neutral-700 drop-shadow-md">
-                    <SheetHeader>
-                        <SheetTitle>Menu</SheetTitle>
-                        <Separator className="my-4 bg-neutral-700" decorative/>
-                        <SheetDescription>
-                            <div className='flex flex-col group py-4'>
-                                <Link href="/" className="my-2 uppercase text-7xl transition text-white hover:group-hover:text-white hover:group-hover:blur-none group-hover:text-muted-foreground group-hover:blur-sm">Home</Link>
-                            </div>
-                        </SheetDescription>
-                    </SheetHeader>
-                </SheetContent>
-            </Sheet>
+            <div className="flex h-full items-center">
+                <ButtonTooltip
+                    label="Go back to homepage"
+                    side="bottom"
+                    align="center"
+                    sideOffset={16}
+                >
+                    <Link href="/">
+                        <Button variant={"ghost"}>
+                            <Home /> Home
+                        </Button>
+                    </Link>
+                </ButtonTooltip>
+                <Separator orientation="vertical" className="h-8 bg-neutral-700 mx-2"/>
+                <ButtonTooltip
+                    label="Go back to homepage"
+                    side="bottom"
+                    align="center"
+                    sideOffset={16}
+                >
+                    <Link href="/projects">
+                        <Button variant={"ghost"}>
+                            <Settings /> Projects
+                        </Button>
+                    </Link>
+                </ButtonTooltip>
+            </div>
 
         </div>
     );
