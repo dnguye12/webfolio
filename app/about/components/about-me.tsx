@@ -13,7 +13,7 @@ const AboutMe = () => {
                         <AvatarImage src="./profile_cover.png" />
                         <AvatarFallback>CN</AvatarFallback>
                     </Avatar>
-
+                    <h2 className="text-2xl font-semibold  mt-6 text-center">Nguyen Duc Huy</h2>
                 </div>
                 <div className="col-span-1 lg:col-span-3">
                     <div className="space-y-8 px-8 lg:px-0">
