@@ -7,8 +7,10 @@ library.add(fas, fab, far);
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { BrowserRouter, Routes, Route } from "react-router";
+import "./i18n.js"
 import "./index.css";
-import Home from "./pages/home/home";
+
+import Home from "./pages/home/Home";
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

@@ -1,11 +1,19 @@
-import moment from "moment"
-import useHomeScale from "../../hooks/useHomeScale"
-import HomeGrid from "./components/HomeGrid"
 import { useState } from "react"
 import { useEffect } from "react"
+import useHomeScale from "../../hooks/useHomeScale"
+import moment from "moment"
+
+import HomeGrid from "./components/HomeGrid"
+
+import "./home.css"
+import { useTranslation } from "react-i18next"
+import Navbar from "../../components/navbar/Navbar"
 
 const Home = () => {
-    const [currentTime, setCurrentTime] = useState("00:00:00")
+    const [currentTime, setCurrentTime] = useState(moment().format("hh:mm:ss"))
+    const [width, setWidth] = useState(window.innerWidth)
+    const [height, setHeight] = useState(window.innerHeight)
+
     const CELL_COUNT = 900
 
     const cells = Array.from({ length: CELL_COUNT }).map((_, idx) => (
@@ -13,6 +21,8 @@ const Home = () => {
     ))
 
     const scale = useHomeScale()
+
+    const { t } = useTranslation("common")
 
     useEffect(() => {
         const timeInterval = setInterval(() => {
@@ -24,6 +34,16 @@ const Home = () => {
         }
     }, [])
 
+    useEffect(() => {
+        const handleResize = () => {
+            setWidth(window.innerWidth)
+            setHeight(window.innerHeight)
+        }
+
+        window.addEventListener("resize", handleResize)
+
+        return () => window.removeEventListener("resize", handleResize)
+    }, [])
     return (
         <main className=" flex flex-col min-h-screen overflow-hidden my-0 mx-auto relative">
             <div id="homeOverlay" className="absolute z-10 top-0 left-0 w-screen h-screen"></div>
@@ -36,8 +56,12 @@ const Home = () => {
                     {cells}
                 </div>
             </div>
+            <Navbar />
             <div className="relative z-20">
                 <div className=" fixed top-8 left-8 text-sm text-neutral-700 font-mono ">{currentTime}</div>
+                <div className=" fixed bottom-8 left-8 text-sm text-neutral-700 font-mono">{width}x{height}</div>
+                <div className=" fixed bottom-8 right-8 text-sm text-neutral-700 font-mono">{t('home_welcome')}</div>
+                <div className=" fixed top-8 right-8 text-sm text-neutral-700 font-mono"><span className="waving-hand text-4xl">👋</span></div>
             </div>
         </main>
     )

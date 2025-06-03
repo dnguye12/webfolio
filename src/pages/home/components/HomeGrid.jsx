@@ -1,6 +1,7 @@
 import { useRef } from "react"
 import { useIsVisible } from "../../../hooks/useIsVisible"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+
 import HomeCell from "./HomeCell"
 
 const HomeGrid = () => {
