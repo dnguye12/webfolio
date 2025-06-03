@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+#homeOverlay {
+  background: #3F3F46;
+  background: radial-gradient(circle, rgba(63, 63, 70, 0) 60%, rgba(255, 255, 255, 1) 100%);
+}
