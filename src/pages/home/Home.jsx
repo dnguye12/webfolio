@@ -44,9 +44,10 @@ const Home = () => {
 
         return () => window.removeEventListener("resize", handleResize)
     }, [])
+
     return (
         <main className=" flex flex-col min-h-screen overflow-hidden my-0 mx-auto relative">
-            <div id="homeOverlay" className="absolute z-10 top-0 left-0 w-screen h-screen"></div>
+            <div id="homeOverlay" className="absolute z-10 top-0 left-0 w-screen h-screen pointer-events-none"></div>
             <div className="h-screen cursor-grab touch-none z-0">
                 <div
                     style={{
@@ -60,8 +61,8 @@ const Home = () => {
             <div className="relative z-20">
                 <div className=" fixed top-8 left-8 text-sm text-neutral-700 font-mono ">{currentTime}</div>
                 <div className=" fixed bottom-8 left-8 text-sm text-neutral-700 font-mono">{width}x{height}</div>
-                <div className=" fixed bottom-8 right-8 text-sm text-neutral-700 font-mono">{t('home_welcome')}</div>
-                <div className=" fixed top-8 right-8 text-sm text-neutral-700 font-mono"><span className="waving-hand text-4xl">👋</span></div>
+                <div className=" fixed bottom-8 right-8 text-sm text-neutral-700 font-mono">Nguyen Duc Huy</div>
+                <div className=" fixed top-8 right-8 text-sm text-neutral-700 font-mono"><span className="waving-hand text-4xl">👋</span> {t('home_welcome')}</div>
             </div>
         </main>
     )
