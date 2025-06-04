@@ -1,3 +1,3 @@
 .nav-link {
-    @apply w-10 h-10 cursor-pointer flex items-center justify-center rounded-full bg-neutral-300 hover:bg-neutral-400 dark:bg-neutral-800 dark:hover:bg-neutral-700 text-neutral-500 drop-shadow-sm transition-all duration-300 hover:scale-110
+  @apply flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-neutral-300 text-neutral-500 drop-shadow-sm transition-all duration-300 hover:scale-110 hover:bg-neutral-400 dark:bg-neutral-800 dark:hover:bg-neutral-700;
 }
