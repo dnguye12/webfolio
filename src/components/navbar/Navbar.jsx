@@ -8,7 +8,6 @@ import { useEffect } from "react";
 const Navbar = () => {
   const [lightMode, setLightMode] = useState(true);
   const [isAudioPlaying, setIsAudioPlaying] = useState(false);
-  const [isIndicatorActive, setIsIndicatorActive] = useState(false);
 
   const audioRef = useRef(null);
 
@@ -19,7 +18,6 @@ const Navbar = () => {
 
   const toggleAudioIndicator = () => {
     setIsAudioPlaying((prev) => !prev);
-    setIsIndicatorActive((prev) => !prev);
   };
 
   useEffect(() => {
@@ -31,7 +29,7 @@ const Navbar = () => {
   }, [isAudioPlaying]);
 
   return (
-    <nav className="fixed bottom-[-8px] left-1/2 z-20 flex h-[58px] w-auto -translate-x-1/2 -translate-y-1/2 items-end rounded-full border border-neutral-200 bg-neutral-50 px-2 shadow-lg">
+    <nav className="fixed bottom-[-8px] left-1/2 z-20 flex h-[58px] w-auto -translate-x-1/2 -translate-y-1/2 items-end rounded-full border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-900 px-2 shadow-lg">
       <div className="flex h-full w-full items-end gap-2 py-2">
         <NavbarLink
           href={"/"}
@@ -44,11 +42,6 @@ const Navbar = () => {
           icon={<FontAwesomeIcon icon="fa-solid fa-computer" />}
         />
         <NavbarLink
-          href={"/experiences"}
-          tip={"Experiences"}
-          icon={<FontAwesomeIcon icon="fa-solid fa-calendar-days" />}
-        />
-        <NavbarLink
           href={"/about-me"}
           tip={"About me"}
           icon={<FontAwesomeIcon icon="fa-solid fa-user" />}
@@ -56,17 +49,30 @@ const Navbar = () => {
         <Separator.Root
           orientation="vertical"
           decorative={true}
-          className="SeparatorRoot bg-neutral-200"
+          className="SeparatorRoot bg-neutral-200 dark:bg-neutral-700"
         />
         <NavbarLink
-          href={"/about-me"}
-          tip={"About me"}
-          icon={<FontAwesomeIcon icon="fa-solid fa-user" />}
+          href={"mailto:duchuyng051@gmail.com"}
+          tip={"Email"}
+          icon={<FontAwesomeIcon icon="fa-solid fa-envelope" />}
+          newTab={true}
+        />
+        <NavbarLink
+          href={"https://github.com/dnguye12"}
+          tip={"Github"}
+          icon={<FontAwesomeIcon icon="fa-brands fa-github" />}
+          newTab={true}
+        />
+        <NavbarLink
+          href={"https://www.linkedin.com/in/duc-huy-nguyen-9392461bb/"}
+          tip={"Linkedin"}
+          icon={<FontAwesomeIcon icon="fa-brands fa-linkedin-in" />}
+          newTab={true}
         />
         <Separator.Root
           orientation="vertical"
           decorative={true}
-          className="SeparatorRoot bg-neutral-200"
+          className="SeparatorRoot bg-neutral-200 dark:bg-neutral-700"
         />
         <button onClick={toggleLightMode} className="nav-link group relative">
           {lightMode ? (
@@ -83,7 +89,7 @@ const Navbar = () => {
           className="nav-link group relative"
         >
           <audio ref={audioRef} className="hidden" src="/audio/loop.mp3" loop />
-          {isIndicatorActive ? (
+          {isAudioPlaying ? (
             <FontAwesomeIcon icon="fa-solid fa-volume-xmark" />
           ) : (
             <FontAwesomeIcon icon="fa-solid fa-volume-high" />

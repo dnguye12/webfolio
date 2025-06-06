@@ -7,7 +7,7 @@ import HomeGrid from "./components/HomeGrid";
 
 import "./home.css";
 import { useTranslation } from "react-i18next";
-import Navbar from "../../components/navbar/Navbar";
+import CharacterSVG from "./components/CharacterSVG";
 
 const Home = () => {
   const [currentTime, setCurrentTime] = useState(moment().format("hh:mm:ss"));
@@ -46,7 +46,7 @@ const Home = () => {
   }, []);
 
   return (
-    <main className="relative mx-auto my-0 flex min-h-screen flex-col overflow-hidden">
+    <>
       <div
         id="homeOverlay"
         className="pointer-events-none absolute left-0 top-0 z-10 h-screen w-screen"
@@ -58,10 +58,63 @@ const Home = () => {
           }}
           className="fixed left-1/2 top-1/2 grid grid-cols-[repeat(30,1fr)] grid-rows-[repeat(30,1fr)] transition-opacity duration-300 will-change-transform"
         >
+          <CharacterSVG
+            char={"D"}
+            style={{
+              "--delay": "300ms",
+              gridColumn: "10 / 11",
+              gridRow: "14 / span 1",
+            }}
+            x="50%"
+          />
+          <CharacterSVG
+            char={"U"}
+            style={{
+              "--delay": "400ms",
+              gridColumn: "12 / 13",
+              gridRow: "16 / span 1",
+            }}
+            x="65%"
+          />
+          <CharacterSVG
+            char={"C"}
+            style={{
+              "--delay": "500ms",
+              gridColumn: "14 / 15",
+              gridRow: "14 / span 1",
+            }}
+            x="50%"
+          />
+          <CharacterSVG
+            char={"H"}
+            style={{
+              "--delay": "600ms",
+              gridColumn: "17 / 18",
+              gridRow: "14 / span 1",
+            }}
+            x="50%"
+          />
+          <CharacterSVG
+            char={"U"}
+            style={{
+              "--delay": "700ms",
+              gridColumn: "19 / 20",
+              gridRow: "16 / span 1",
+            }}
+            x="65%"
+          />
+          <CharacterSVG
+            char={"Y"}
+            style={{
+              "--delay": "800ms",
+              gridColumn: "21 / 22",
+              gridRow: "14 / span 1",
+            }}
+            x="50%"
+          />
           {cells}
         </div>
       </div>
-      <Navbar />
       <div className="relative z-20">
         <div className="fixed left-8 top-8 font-mono text-sm text-neutral-700">
           {currentTime}
@@ -76,7 +129,7 @@ const Home = () => {
           <span className="waving-hand text-4xl">👋</span> {t("home_welcome")}
         </div>
       </div>
-    </main>
+    </>
   );
 };
 
