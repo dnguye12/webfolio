@@ -1,19 +1,23 @@
-import RotatingText from "../../components/react_bits/RotatingText";
+import About from "./components/About";
+import Hero from "./components/Hero";
+import { Separator } from "radix-ui";
 
 const AboutMe = () => {
     return (
-        <RotatingText
-            texts={['React', 'Bits', 'Is', 'Cool!']}
-            mainClassName="px-2 sm:px-2 md:px-3 bg-cyan-300 text-black overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg"
-            staggerFrom={"last"}
-            initial={{ y: "100%" }}
-            animate={{ y: 0 }}
-            exit={{ y: "-120%" }}
-            staggerDuration={0.025}
-            splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
-            transition={{ type: "spring", damping: 30, stiffness: 400 }}
-            rotationInterval={2000}
-        />
+        <div className=" bg-neutral-100 dark:bg-neutral-900 transition-all">
+            <Hero />
+            <Separator.Root
+                orientation="horizontal"
+                decorative={true}
+                className="SeparatorRoot bg-neutral-200 dark:bg-neutral-700"
+            />
+            <About/>
+            <Separator.Root
+                orientation="horizontal"
+                decorative={true}
+                className="SeparatorRoot bg-neutral-200 dark:bg-neutral-700"
+            />
+        </div>
     );
 }
 

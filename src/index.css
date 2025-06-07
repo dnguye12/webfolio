@@ -70,3 +70,21 @@ body {
     opacity: 1
   }
 }
+
+@layer utilities {
+  .grid-container {
+    @apply w-full h-full border border-neutral-300 dark:border-neutral-700 rounded-xl overflow-hidden flex flex-col drop-shadow-lg;
+  }
+
+  .grid-headtext {
+    @apply text-xl font-semibold mb-2;
+  }
+
+  .grid-subtext {
+    @apply text-base;
+  }
+
+  .copy-container {
+    @apply cursor-pointer flex justify-center items-center gap-2;
+  }
+}
