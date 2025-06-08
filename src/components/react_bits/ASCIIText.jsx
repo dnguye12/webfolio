@@ -97,10 +97,12 @@ class AsciiFilter {
         this.context.font = `${this.fontSize}px ${this.fontFamily}`;
         const charWidth = this.context.measureText('A').width;
 
-        this.cols = Math.floor(
+        const helperCols = Math.floor(
             this.width / (this.fontSize * (charWidth / this.fontSize))
         );
-        this.rows = Math.floor(this.height / this.fontSize);
+        const helperRows = Math.floor(this.height / this.fontSize);
+        this.cols = Math.max(1, helperCols)
+        this.rows = Math.max(1, helperRows)
 
         this.canvas.width = this.cols;
         this.canvas.height = this.rows;
@@ -250,7 +252,7 @@ class CanvAscii {
         this.height = height;
         this.enableWaves = enableWaves;
 
-        this.camera = new THREE.PerspectiveCamera(45, this.width / this.height, 1, 1000);
+        this.camera = new THREE.PerspectiveCamera(45, this.width / this.height, 0.1, 1000);
         this.camera.position.z = 30;
 
         this.scene = new THREE.Scene();

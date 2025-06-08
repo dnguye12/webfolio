@@ -14,7 +14,7 @@ const About = () => {
                         <div className="z-10 bg-neutral-100 dark:bg-neutral-900 sm:p-6 p-4 transition-all">
                             <p className="grid-headtext text-neutral-900 dark:text-white transition-all">Hi, I’m Nguyen Duc Huy</p>
                             <p className="grid-subtext text-neutral-700 dark:text-neutral-400 transition-all">
-                                I create captivating designs by blending aesthetics, motion, and technology.
+                                I create captivating designs by blending aesthetics and technology.
                             </p>
                         </div>
                     </div>
@@ -51,7 +51,7 @@ const About = () => {
                     <div className="grid-container bg-neutral-200 dark:bg-neutral-900 transition-all relative justify-end">
                         <div className="block xl:absolute top-0 w-full h-[276px] xl:h-4/5 grayscale dark:grayscale-0 transition-all">
                             <ASCIIText
-                                text='Passion'
+                                text='Code'
                                 enableWaves={true}
                                 asciiFontSize={8}
                             />

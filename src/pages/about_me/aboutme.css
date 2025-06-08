@@ -1,0 +1,7 @@
+.vertElement .vertical-timeline-element-content {
+    @apply border border-neutral-300 dark:border-neutral-700 bg-neutral-100 dark:bg-neutral-900 transition-all rounded-xl !shadow-none
+}
+
+.vertElement .vertical-timeline-element-content-arrow {
+    @apply border-r-8 border-r-neutral-700 dark:border-r-neutral-700 transition-all
+}   

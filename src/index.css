@@ -3,6 +3,7 @@
 
 @import "./components/navbar/navbar.css";
 @import "./pages/projects/projects.css";
+@import "./pages/about_me/aboutme.css";
 
 @tailwind base;
 @tailwind components;

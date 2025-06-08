@@ -1,4 +1,5 @@
 import About from "./components/About";
+import Experience from "./components/Experience";
 import Hero from "./components/Hero";
 import { Separator } from "radix-ui";
 
@@ -12,6 +13,12 @@ const AboutMe = () => {
                 className="SeparatorRoot bg-neutral-200 dark:bg-neutral-700"
             />
             <About/>
+            <Separator.Root
+                orientation="horizontal"
+                decorative={true}
+                className="SeparatorRoot bg-neutral-200 dark:bg-neutral-700"
+            />
+            <Experience />
             <Separator.Root
                 orientation="horizontal"
                 decorative={true}
