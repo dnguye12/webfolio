@@ -2,6 +2,7 @@ import About from "./components/About";
 import Experience from "./components/Experience";
 import Hero from "./components/Hero";
 import { Separator } from "radix-ui";
+import Skills from "./components/Skills";
 
 const AboutMe = () => {
     return (
@@ -24,6 +25,7 @@ const AboutMe = () => {
                 decorative={true}
                 className="SeparatorRoot bg-neutral-200 dark:bg-neutral-700"
             />
+            <Skills />
         </div>
     );
 }

@@ -4,4 +4,28 @@
 
 .vertElement .vertical-timeline-element-content-arrow {
     @apply border-r-8 border-r-neutral-700 dark:border-r-neutral-700 transition-all
-}   
+}
+
+#skillTable tr {
+    @apply transition-all bg-neutral-100 hover:bg-neutral-50 dark:bg-neutral-900 dark:hover:bg-neutral-800 text-neutral-900 dark:text-white
+}
+
+#skillTable thead tr {
+    @apply border-b border-b-neutral-300 dark:border-b-neutral-700 transition-colors
+}
+
+#skillTable thead tr th {
+    @apply h-12 px-4 text-left align-middle font-medium
+}
+
+#skillTable tbody tr {
+    @apply border-b border-b-neutral-300 dark:border-b-neutral-700 transition-colors
+}
+
+#skillTable tbody tr th {
+    @apply p-4 align-middle text-sm sm:text-base font-semibold text-start
+}
+
+#skillTable tbody tr td {
+    @apply p-4 align-middle text-sm sm:text-base
+}
