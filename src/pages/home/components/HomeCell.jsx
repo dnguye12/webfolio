@@ -26,7 +26,7 @@ const HomeCell = ({ classes }) => {
     <div
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className={`bg-transparent ${classes} hover:duration-0 ${hoverClass} transition-all duration-[2000ms]`}
+      className={`bg-neutral-100 dark:bg-neutral-900 ${classes} hover:duration-0 ${hoverClass} transition-all duration-[2000ms]`}
     ></div>
   );
 };

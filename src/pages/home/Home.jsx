@@ -47,10 +47,7 @@ const Home = () => {
 
   return (
     <>
-      <div
-        id="homeOverlay"
-        className="pointer-events-none absolute left-0 top-0 z-10 h-screen w-screen"
-      ></div>
+      <div className="pointer-events-none absolute left-0 top-0 z-10 h-screen w-screen homeOverlay transition-all duration-[2000ms]"></div>
       <div className="z-0 h-screen cursor-grab touch-none">
         <div
           style={{
@@ -116,16 +113,16 @@ const Home = () => {
         </div>
       </div>
       <div className="relative z-20">
-        <div className="fixed left-8 top-8 font-mono text-sm text-neutral-700">
+        <div className="fixed left-8 top-8 font-mono text-sm text-neutral-700 dark:text-neutral-300 transition-all duration-[2000ms]">
           {currentTime}
         </div>
-        <div className="fixed bottom-8 left-8 font-mono text-sm text-neutral-700">
+        <div className="fixed bottom-8 left-8 font-mono text-sm text-neutral-700 dark:text-neutral-300 transition-all duration-[2000ms]">
           {width}x{height}
         </div>
-        <div className="fixed bottom-8 right-8 font-mono text-sm text-neutral-700">
+        <div className="fixed bottom-8 right-8 font-mono text-sm text-neutral-700 dark:text-neutral-300 transition-all duration-[2000ms]">
           Nguyen Duc Huy
         </div>
-        <div className="fixed right-8 top-8 font-mono text-sm text-neutral-700">
+        <div className="fixed right-8 top-8 font-mono text-sm text-neutral-700 dark:text-neutral-300 transition-all duration-[2000ms]">
           <span className="waving-hand text-4xl">👋</span> {t("home_welcome")}
         </div>
       </div>

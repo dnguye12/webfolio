@@ -53,7 +53,7 @@ const Navbar = () => {
         />
         <NavbarLink
           href={"mailto:duchuyng051@gmail.com"}
-          tip={"Email"}
+          tip={"Mail"}
           icon={<FontAwesomeIcon icon="fa-solid fa-envelope" />}
           newTab={true}
         />
@@ -69,6 +69,12 @@ const Navbar = () => {
           icon={<FontAwesomeIcon icon="fa-brands fa-linkedin-in" />}
           newTab={true}
         />
+        <NavbarLink
+          href={"http://discord.com/users/589583302890094600"}
+          tip={"Discord"}
+          icon={<FontAwesomeIcon icon="fa-brands fa-discord" />}
+          newTab={true}
+        />
         <Separator.Root
           orientation="vertical"
           decorative={true}
@@ -76,9 +82,9 @@ const Navbar = () => {
         />
         <button onClick={toggleLightMode} className="nav-link group relative">
           {lightMode ? (
-            <FontAwesomeIcon icon="fa-solid fa-moon" />
+            <span className="text-2xl">⚫</span>
           ) : (
-            <FontAwesomeIcon icon="fa-solid fa-sun" />
+            <span className="text-2xl">☀️</span>
           )}
           <div className="absolute -top-12 select-none whitespace-nowrap rounded-lg border border-neutral-200 bg-neutral-100 px-2 py-1 text-sm text-neutral-700 opacity-0 drop-shadow-md transition-all duration-300 group-hover:opacity-100 dark:bg-neutral-800 dark:text-neutral-400">
             Toggle theme

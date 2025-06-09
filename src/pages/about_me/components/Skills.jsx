@@ -1,6 +1,5 @@
 import { GradientCard } from "../../../components/eldoraui/gradientcard";
 import SplitText from "../../../components/react_bits/SplitText";
-import SkillCard from "./SkillCard";
 
 const Skills = () => {
     return (
