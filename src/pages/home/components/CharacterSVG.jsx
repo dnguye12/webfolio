@@ -6,7 +6,7 @@ const CharacterSVG = ({ char, style, x }) => {
             viewBox="0 0 42 84"
             preserveAspectRatio="xMidYMid slice"
             overflow={"visible"}
-            className="absolute z-20 pointer-events-none fade fill-neutral-900 dark:fill-neutral-100 transition-all duration-[2000ms]"
+            className="absolute z-20 pointer-events-none fade fill-neutral-900 dark:fill-neutral-100 transition-all duration-[1000ms]"
             style={{
                 ...style,
                 animationDelay: "var(--delay)",

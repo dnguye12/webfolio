@@ -5,16 +5,10 @@ import { useState } from "react";
 import { useRef } from "react";
 import { useEffect } from "react";
 
-const Navbar = () => {
-  const [lightMode, setLightMode] = useState(true);
+const Navbar = ({theme, toggleTheme}) => {
   const [isAudioPlaying, setIsAudioPlaying] = useState(false);
 
   const audioRef = useRef(null);
-
-  const toggleLightMode = () => {
-    document.documentElement.classList.toggle("dark");
-    setLightMode((prev) => !prev);
-  };
 
   const toggleAudioIndicator = () => {
     setIsAudioPlaying((prev) => !prev);
@@ -80,8 +74,8 @@ const Navbar = () => {
           decorative={true}
           className="SeparatorRoot bg-neutral-200 dark:bg-neutral-700"
         />
-        <button onClick={toggleLightMode} className="nav-link group relative">
-          {lightMode ? (
+        <button onClick={toggleTheme} className="nav-link group relative" aria-label="Toggle theme">
+          {theme === "light" ? (
             <span className="text-2xl">⚫</span>
           ) : (
             <span className="text-2xl">☀️</span>

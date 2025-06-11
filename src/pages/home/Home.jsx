@@ -8,12 +8,15 @@ import HomeGrid from "./components/HomeGrid";
 import "./home.css";
 import { useTranslation } from "react-i18next";
 import CharacterSVG from "./components/CharacterSVG";
+import { Link } from "react-router";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Hamster from "./components/Hamster";
 
-const Home = () => {
+
+const Home = ({theme, toggleTheme}) => {
   const [currentTime, setCurrentTime] = useState(moment().format("hh:mm:ss"));
   const [width, setWidth] = useState(window.innerWidth);
   const [height, setHeight] = useState(window.innerHeight);
-
   const CELL_COUNT = 900;
 
   const cells = Array.from({ length: CELL_COUNT }).map((_, idx) => (
@@ -47,14 +50,59 @@ const Home = () => {
 
   return (
     <>
-      <div className="pointer-events-none absolute left-0 top-0 z-10 h-screen w-screen homeOverlay transition-all duration-[2000ms]"></div>
-      <div className="z-0 h-screen cursor-grab touch-none">
+      <div className="pointer-events-none absolute left-0 top-0 z-10 h-screen w-screen homeOverlay transition-all duration-[1000ms]"></div>
+      <div className="z-0 h-screen cursor-grab touch-none bg-neutral-100 dark:bg-neutral-900 transition-all duration-[1000ms]">
         <div
           style={{
             transform: ` translate(-50%, -50%) skewX(-48deg) skewY(14deg) scaleX(2) scale(${scale}) `,
           }}
           className="fixed left-1/2 top-1/2 grid grid-cols-[repeat(30,1fr)] grid-rows-[repeat(30,1fr)] transition-opacity duration-300 will-change-transform"
         >
+          <div className=" absolute z-20 flex flex-col items-center"
+            style={{
+              gridColumn: "12",
+              gridRow: "11",
+            }}
+          >
+            <p className="text-xl mb-2 font-semibold text-neutral-900 dark:text-neutral-100">Dark Mode?</p>
+            <label className="switch">
+              <input className="cb" type="checkbox" onChange={toggleTheme} checked={theme === "dark"}/>
+              <span className="toggle">
+                <span className="left">off</span>
+                <span className="right">on</span>
+              </span>
+            </label>
+          </div>
+          <div className=" absolute z-20 flex flex-col items-center"
+            style={{
+              gridColumn: "17",
+              gridRow: "11",
+            }}
+          >
+            <p className="text-xl mb-2 font-semibold text-neutral-900 dark:text-neutral-100">This website is powered by HamHam.</p>
+            <Hamster />
+          </div>
+          <div className=" absolute z-20 "
+            style={{
+              gridColumn: "12",
+              gridRow: "20",
+            }}
+          >
+            <Link to="/projects" id="HomeAboutMe" className=" bg-neutral-900 dark:bg-neutral-100">
+              <span className="bg-neutral-900 dark:bg-neutral-100 text-neutral-100 dark:text-neutral-900 shadow-[0_0.4em_0.1em_0.019em_#fff] dark:shadow-[0_0.4em_0.1em_0.019em_#000]"><FontAwesomeIcon icon="fa-solid fa-computer" className="mr-2" /> Projects</span>
+            </Link>
+          </div>
+          <div className=" absolute z-20 "
+            style={{
+              gridColumn: "15",
+              gridRow: "20",
+            }}
+          >
+            <Link to="/about-me" id="HomeAboutMe" className=" bg-neutral-900 dark:bg-neutral-100">
+
+              <span className="bg-neutral-900 dark:bg-neutral-100 text-neutral-100 dark:text-neutral-900 shadow-[0_0.4em_0.1em_0.019em_#fff] dark:shadow-[0_0.4em_0.1em_0.019em_#000]"><FontAwesomeIcon icon="fa-solid fa-user" className="mr-2" /> About Me</span>
+            </Link>
+          </div>
           <CharacterSVG
             char={"D"}
             style={{
@@ -113,16 +161,16 @@ const Home = () => {
         </div>
       </div>
       <div className="relative z-20">
-        <div className="fixed left-8 top-8 font-mono text-sm text-neutral-700 dark:text-neutral-300 transition-all duration-[2000ms]">
+        <div className="fixed left-8 top-8 font-mono text-sm text-neutral-700 dark:text-neutral-300 transition-all duration-[1000ms]">
           {currentTime}
         </div>
-        <div className="fixed bottom-8 left-8 font-mono text-sm text-neutral-700 dark:text-neutral-300 transition-all duration-[2000ms]">
+        <div className="fixed bottom-8 left-8 font-mono text-sm text-neutral-700 dark:text-neutral-300 transition-all duration-[1000ms]">
           {width}x{height}
         </div>
-        <div className="fixed bottom-8 right-8 font-mono text-sm text-neutral-700 dark:text-neutral-300 transition-all duration-[2000ms]">
+        <div className="fixed bottom-8 right-8 font-mono text-sm text-neutral-700 dark:text-neutral-300 transition-all duration-[1000ms]">
           Nguyen Duc Huy
         </div>
-        <div className="fixed right-8 top-8 font-mono text-sm text-neutral-700 dark:text-neutral-300 transition-all duration-[2000ms]">
+        <div className="fixed right-8 top-8 font-mono text-sm text-neutral-700 dark:text-neutral-300 transition-all duration-[1000ms]">
           <span className="waving-hand text-4xl">👋</span> {t("home_welcome")}
         </div>
       </div>

@@ -44,7 +44,7 @@ const experiences = [
 
 const Experience = () => {
     return (
-        <section id="hero" className="relative flex flex-col items-start justify-center my-[calc(clamp(5em,21vh,12em)*.5)] px-4 md:px-6 container mx-auto bg-neutral-100 dark:bg-neutral-900 transition-all">
+        <section id="experience" className="relative flex flex-col items-start justify-center my-[calc(clamp(5em,21vh,12em)*.5)] px-4 md:px-6 container mx-auto bg-neutral-100 dark:bg-neutral-900 transition-all">
             <div className=" flex flex-col items-center -mt-8 mb-8">
                 <SplitText
                     text="My Experiences"
