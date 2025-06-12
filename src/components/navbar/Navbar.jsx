@@ -1,9 +1,10 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import NavbarLink from "./NavbarLink";
+import NavbarLink from "./components/NavbarLink";
 import { Separator } from "radix-ui";
 import { useState } from "react";
 import { useRef } from "react";
 import { useEffect } from "react";
+import LangSwitcher from "./components/LangSwitcher";
 
 const Navbar = ({theme, toggleTheme}) => {
   const [isAudioPlaying, setIsAudioPlaying] = useState(false);
@@ -98,6 +99,7 @@ const Navbar = ({theme, toggleTheme}) => {
             Background music
           </div>
         </button>
+        <LangSwitcher />
       </div>
     </nav>
   );

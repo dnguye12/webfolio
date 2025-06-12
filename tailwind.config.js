@@ -8,6 +8,7 @@ export default {
       animation: {
         marquee: "marquee var(--duration) linear infinite",
         "marquee-vertical": "marquee-vertical var(--duration) linear infinite",
+        marquee2: 'marquee2 15s linear infinite',
       },
       keyframes: {
         marquee: {
@@ -18,7 +19,14 @@ export default {
           from: { transform: "translateY(0)" },
           to: { transform: "translateY(calc(-100% - var(--gap)))" },
         },
+        marquee2: {
+          from: { transform: 'translateX(0%)' },
+          to: { transform: 'translateX(-50%)' }
+        }
       },
+      translate: {
+         '101': '101%',
+       },
     },
   },
   plugins: [],

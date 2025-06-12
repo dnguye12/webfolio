@@ -26,7 +26,7 @@ const textLoopTransition = {
 
 const Hero = () => {
     return (
-        <section className=" relative w-full overflow-hidden bg-neutral-100 dark:bg-neutral-900 transition-all pointer-events-none">
+        <section className=" relative w-full max-w-screen overflow-hidden bg-neutral-100 dark:bg-neutral-900 transition-all pointer-events-none">
             <div className="relative py-[calc(clamp(5em,21vh,12em)*.5)]">
                 <div className="flex w-full items-center justify-center px-4 md:px-6 z-10 relative">
                     <h1 className="text-[calc(clamp(3.25em,7vw,8em)*.5)] font-medium text-neutral-900 dark:text-neutral-100">

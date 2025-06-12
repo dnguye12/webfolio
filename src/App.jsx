@@ -5,13 +5,14 @@ import AboutMe from "./pages/about_me/AboutMe"
 import Navbar from "./components/navbar/Navbar";
 import useTheme from "./hooks/useTheme";
 import TransitionProvider from "./components/transition/TransitionProvider";
+import "flag-icons/css/flag-icons.min.css";
 
 const App = () => {
     const { theme, toggleTheme } = useTheme()
 
     return (
         <TransitionProvider>
-            <main className="relative mx-auto my-0 flex min-h-screen flex-col overflow-hidden">
+            <main className="relative mx-auto my-0 flex min-h-screen flex-col overflow-x-hidden">
 
                 <Routes>
                     <Route index element={<Home theme={theme} toggleTheme={toggleTheme} />}></Route>

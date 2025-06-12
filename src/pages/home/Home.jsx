@@ -64,7 +64,7 @@ const Home = ({theme, toggleTheme}) => {
               gridRow: "11",
             }}
           >
-            <p className="text-xl mb-2 font-semibold text-neutral-900 dark:text-neutral-100">Dark Mode?</p>
+            <p className="text-xl mb-2 font-semibold text-neutral-900 dark:text-neutral-100">{t("home_dark_mode")}</p>
             <label className="switch">
               <input className="cb" type="checkbox" onChange={toggleTheme} checked={theme === "dark"}/>
               <span className="toggle">
@@ -79,7 +79,7 @@ const Home = ({theme, toggleTheme}) => {
               gridRow: "11",
             }}
           >
-            <p className="text-xl mb-2 font-semibold text-neutral-900 dark:text-neutral-100">This website is powered by HamHam.</p>
+            <p className="text-xl mb-2 font-semibold text-neutral-900 dark:text-neutral-100">{t("home_powered_by")}</p>
             <Hamster />
           </div>
           <div className=" absolute z-20 "
@@ -89,7 +89,7 @@ const Home = ({theme, toggleTheme}) => {
             }}
           >
             <Link to="/projects" id="HomeAboutMe" className=" bg-neutral-900 dark:bg-neutral-100">
-              <span className="bg-neutral-900 dark:bg-neutral-100 text-neutral-100 dark:text-neutral-900 shadow-[0_0.4em_0.1em_0.019em_#fff] dark:shadow-[0_0.4em_0.1em_0.019em_#000]"><FontAwesomeIcon icon="fa-solid fa-computer" className="mr-2" /> Projects</span>
+              <span className="bg-neutral-900 dark:bg-neutral-100 text-neutral-100 dark:text-neutral-900 shadow-[0_0.4em_0.1em_0.019em_#fff] dark:shadow-[0_0.4em_0.1em_0.019em_#000]"><FontAwesomeIcon icon="fa-solid fa-computer" className="mr-2" /> {t("Projects")}</span>
             </Link>
           </div>
           <div className=" absolute z-20 "
@@ -100,13 +100,13 @@ const Home = ({theme, toggleTheme}) => {
           >
             <Link to="/about-me" id="HomeAboutMe" className=" bg-neutral-900 dark:bg-neutral-100">
 
-              <span className="bg-neutral-900 dark:bg-neutral-100 text-neutral-100 dark:text-neutral-900 shadow-[0_0.4em_0.1em_0.019em_#fff] dark:shadow-[0_0.4em_0.1em_0.019em_#000]"><FontAwesomeIcon icon="fa-solid fa-user" className="mr-2" /> About Me</span>
+              <span className="bg-neutral-900 dark:bg-neutral-100 text-neutral-100 dark:text-neutral-900 shadow-[0_0.4em_0.1em_0.019em_#fff] dark:shadow-[0_0.4em_0.1em_0.019em_#000]"><FontAwesomeIcon icon="fa-solid fa-user" className="mr-2" /> {t("About_Me")}</span>
             </Link>
           </div>
           <CharacterSVG
             char={"D"}
             style={{
-              "--delay": "300ms",
+              "--delay": "800ms",
               gridColumn: "10 / 11",
               gridRow: "14 / span 1",
             }}
@@ -115,7 +115,7 @@ const Home = ({theme, toggleTheme}) => {
           <CharacterSVG
             char={"U"}
             style={{
-              "--delay": "400ms",
+              "--delay": "900ms",
               gridColumn: "12 / 13",
               gridRow: "16 / span 1",
             }}
@@ -124,7 +124,7 @@ const Home = ({theme, toggleTheme}) => {
           <CharacterSVG
             char={"C"}
             style={{
-              "--delay": "500ms",
+              "--delay": "1000ms",
               gridColumn: "14 / 15",
               gridRow: "14 / span 1",
             }}
@@ -133,7 +133,7 @@ const Home = ({theme, toggleTheme}) => {
           <CharacterSVG
             char={"H"}
             style={{
-              "--delay": "600ms",
+              "--delay": "1100ms",
               gridColumn: "17 / 18",
               gridRow: "14 / span 1",
             }}
@@ -142,7 +142,7 @@ const Home = ({theme, toggleTheme}) => {
           <CharacterSVG
             char={"U"}
             style={{
-              "--delay": "700ms",
+              "--delay": "1200ms",
               gridColumn: "19 / 20",
               gridRow: "16 / span 1",
             }}
@@ -151,7 +151,7 @@ const Home = ({theme, toggleTheme}) => {
           <CharacterSVG
             char={"Y"}
             style={{
-              "--delay": "800ms",
+              "--delay": "1300ms",
               gridColumn: "21 / 22",
               gridRow: "14 / span 1",
             }}
@@ -161,7 +161,7 @@ const Home = ({theme, toggleTheme}) => {
         </div>
       </div>
       <div className="relative z-20">
-        <div className="fixed left-8 top-8 font-mono text-sm text-neutral-700 dark:text-neutral-300 transition-all duration-[1000ms]">
+        <div className="fixed left-8 top-8 font-mono text-sm text-neutral-700 dark:text-neutral-300 transition-all duration-[1000ms] inline-flex items-center h-10">
           {currentTime}
         </div>
         <div className="fixed bottom-8 left-8 font-mono text-sm text-neutral-700 dark:text-neutral-300 transition-all duration-[1000ms]">
@@ -170,7 +170,7 @@ const Home = ({theme, toggleTheme}) => {
         <div className="fixed bottom-8 right-8 font-mono text-sm text-neutral-700 dark:text-neutral-300 transition-all duration-[1000ms]">
           Nguyen Duc Huy
         </div>
-        <div className="fixed right-8 top-8 font-mono text-sm text-neutral-700 dark:text-neutral-300 transition-all duration-[1000ms]">
+        <div className="fixed right-8 top-8 font-mono text-sm text-neutral-700 dark:text-neutral-300 transition-all duration-[1000ms] inline-flex items-center h-10">
           <span className="waving-hand text-4xl">👋</span> {t("home_welcome")}
         </div>
       </div>

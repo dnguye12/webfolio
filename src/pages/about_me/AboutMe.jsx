@@ -18,7 +18,7 @@ const AboutMe = () => {
     }, [location])
 
     return (
-        <div className=" bg-neutral-100 dark:bg-neutral-900 transition-all">
+        <div className=" bg-neutral-100 dark:bg-neutral-900 transition-all w-screen overflow-x-hidden">
             <Hero />
             <Separator.Root
                 orientation="horizontal"
@@ -38,6 +38,11 @@ const AboutMe = () => {
                 className="SeparatorRoot bg-neutral-200 dark:bg-neutral-700"
             />
             <Skills />
+            <Separator.Root
+                orientation="horizontal"
+                decorative={true}
+                className="SeparatorRoot bg-neutral-200 dark:bg-neutral-700"
+            />
         </div>
     );
 }

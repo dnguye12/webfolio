@@ -201,7 +201,7 @@ const LetterGlitch = ({
     }, [glitchSpeed, smooth]);
 
     return (
-        <div className="absolute w-full h-full bg-neutral-100 grayscale dark:grayscale-0 dark:bg-neutral-900 object-cover top-0 left-0 overflow-hidden z-0 transition-all">
+        <div className="absolute w-full h-full max-w-screen overflow-x-hidden bg-neutral-100 grayscale dark:grayscale-0 dark:bg-neutral-900 object-cover top-0 left-0 overflow-hidden z-0 transition-all">
             <canvas ref={canvasRef} className="block w-full h-full opacity-50 dark:opacity-25" />
             {outerVignette && (
                 <div

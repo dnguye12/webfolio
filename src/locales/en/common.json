@@ -1,3 +1,8 @@
 {
-  "home_welcome": "Welcome to my portfolio."
+  "home_welcome": "Welcome to my portfolio.",
+  "home_dark_mode": "Dark Mode?",
+  "home_powered_by": "This website is powered by HamHam.",
+
+  "Projects": "Projects",
+  "About_Me": "About Me"
 }
