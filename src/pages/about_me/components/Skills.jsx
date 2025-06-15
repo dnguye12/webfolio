@@ -1,12 +1,13 @@
 import { GradientCard } from "../../../components/eldoraui/gradientcard";
 import SplitText from "../../../components/react_bits/SplitText";
 
-const Skills = () => {
+const Skills = ({ t, i18n }) => {
     return (
         <section className="relative flex flex-col items-start justify-center my-[calc(clamp(5em,21vh,12em)*.5)] px-4 md:px-6 container mx-auto bg-neutral-100 dark:bg-neutral-900 transition-all">
             <div className=" flex flex-col items-start">
                 <SplitText
-                    text="My Skills"
+                key={i18n.language}
+                    text={t("Skills")}
                     className="font-semibold text-neutral-900 dark:text-neutral-100 transition-all text-[calc(clamp(3.25em,7vw,8em)*.5)] -mt-8 mb-8"
                     delay={100}
                     duration={0.6}
@@ -23,30 +24,30 @@ const Skills = () => {
                     <GradientCard
                         className="p-4"
                         title="Web"
-                        description="I build responsive, high-performance web applications."
+                        description={t("skill_1")}
                         icon="fa-solid fa-globe"
                     />
                     <GradientCard
                         className="p-4"
                         title="UX/UI"
-                        description="I craft intuitive interfaces and seamless experiences."
+                        description={t("skill_2")}
                         icon="fa-solid fa-palette"
                     />
                     <GradientCard
                         className="p-4"
                         title="Backend"
-                        description="I architect scalable backend server and database solutions."
+                        description={t("skill_3")}
                         icon="fa-solid fa-gears"
                     />
                     <GradientCard
                         className="p-4"
-                        description="I apply animations to make the experience more engaging."
+                        description={t("skill_4")}
                         title="Motion"
                         icon={"fa-solid fa-wand-magic-sparkles"}
                     />
                     <GradientCard
                         className="p-4"
-                        description="I foster clear communication and teamwork."
+                        description={t("skill_5")}
                         title="Soft Skill"
                         icon={"fa-solid fa-masks-theater"}
                     />
@@ -55,13 +56,13 @@ const Skills = () => {
                     <GradientCard
                         className="p-4"
                         title="Web"
-                        description="I build responsive, high-performance web applications."
+                        description={t("skill_1")}
                         icon="fa-solid fa-globe"
                     />
                     <GradientCard
                         className="p-4"
                         title="Backend"
-                        description="I architect scalable backend server and database solutions."
+                        description={t("skill_2")}
                         icon="fa-solid fa-gears"
                     />
                 </div>
@@ -69,18 +70,18 @@ const Skills = () => {
                     <GradientCard
                         className="p-4"
                         title="UX/UI"
-                        description="I craft intuitive interfaces and seamless experiences."
+                        description={t("skill_3")}
                         icon="fa-solid fa-palette"
                     />
                     <GradientCard
                         className="p-4"
-                        description="I apply animations to make the experience more engaging."
+                        description={t("skill_4")}
                         title="Motion"
                         icon={"fa-solid fa-wand-magic-sparkles"}
                     />
                     <GradientCard
                         className="p-4"
-                        description="I foster clear communication and teamwork."
+                        description={t("skill_5")}
                         title="Soft Skill"
                         icon={"fa-solid fa-masks-theater"}
                     />
@@ -89,7 +90,8 @@ const Skills = () => {
                 <div className="grid grid-cols-1 gap-4 md:grid-cols-5 md:gap-8 px-4 md:px-0">
                     <div className="col-span-1 md:col-span-2">
                         <SplitText
-                            text="or in more details..."
+                        key={i18n.language}
+                            text={t("skill_more_detail")}
                             className="font-semibold text-neutral-900 dark:text-neutral-100 transition-all text-xl md:text-[calc(clamp(3.25em,7vw,8em)*.25)]"
                             delay={100}
                             duration={0.6}
@@ -106,33 +108,33 @@ const Skills = () => {
                         <table id="skillTable" className="w-full caption-bottom text-sm">
                             <thead className="[&_tr]:border-b">
                                 <tr>
-                                    <th className="w-[150px] sm:w-[250px]">Categories</th>
-                                    <th>Technologies</th>
+                                    <th className="w-[150px] sm:w-[250px]">{t("table_categories")}</th>
+                                    <th>{t("table_technologies")}</th>
                                 </tr>
                             </thead>
                             <tbody className="[&_tr:last-child]:!border-0">
                                 <tr>
-                                    <th>Front-end Development</th>
+                                    <th>{t("category_frontend")}</th>
                                     <td>React, Tailwind, NextJS, ThreeJS, Bootstrap, HTML, CSS</td>
                                 </tr>
                                 <tr>
-                                    <th>Back-end Development</th>
+                                    <th>{t("category_backend")}</th>
                                     <td>NodeJS, ExpressJS, NextJS, JavaScript, PHP, Python</td>
                                 </tr>
                                 <tr>
-                                    <th>Databases</th>
+                                    <th>{t("category_databases")}</th>
                                     <td>MongoDB, Mongoose, Convex, Prisma, MySQL</td>
                                 </tr>
                                 <tr>
-                                    <th>General Programming</th>
+                                    <th>{t("category_general")}</th>
                                     <td>Java, C++, Python, C#, JavaScript</td>
                                 </tr>
                                 <tr>
-                                    <th>Other Programming Tools</th>
+                                    <th>{t("category_tools")}</th>
                                     <td>Git, Axure, Postman</td>
                                 </tr>
                                 <tr>
-                                    <th>Design & Creative Tools</th>
+                                    <th>{t("category_design")}</th>
                                     <td>Figma, Photoshop, Premiere Pro, After Effects, Blender, Fusion 360, Canva</td>
                                 </tr>
                             </tbody>

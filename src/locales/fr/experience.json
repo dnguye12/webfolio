@@ -1,0 +1,41 @@
+{
+  "Experience": "Mes Parcours Professionels",
+  "experiences": [
+    {
+      "title": "Stagiaire",
+      "company_name": "Laboratoire Interdisciplinaire des Sciences du Numérique - Orsay, France",
+      "iconSrc": "lisn.png",
+      "iconBg": "#FFF9E0",
+      "date": "Mars 2024 - Août 2024",
+      "points": [
+        "Python, OpenCV, MediaPipe, C#, Unity, Blender, Sockets",
+        "Développement d'un agent IA interactif capable d'analyser la reconnaissance des émotions faciales, le suivi du regard et l'estimation des poses.",
+        "Implémentation en Python et Unity avec animations 3D, motion capture et synthèse vocale réaliste."
+      ]
+    },
+    {
+      "title": "Développeur junior",
+      "company_name": "Dealsup - Antony, France",
+      "iconSrc": "dealsup.jpg",
+      "iconBg": "#FFF",
+      "date": "Février 2023 - Janvier 2024",
+      "points": [
+        "Figma, React, Axios, Tailwind CSS",
+        "Conception et implémentation d'un nouveau système administratif de gestion d'entreprise (design UI/UX, développement front-end).",
+        "Création d'une interface intuitive et ergonomique, réduisant les erreurs système et améliorant l'efficacité administrative."
+      ]
+    },
+    {
+      "title": "Freelancer",
+      "company_name": "Fiverr, Upwork, Discord",
+      "iconSrc": "fiverr.png",
+      "iconBg": "#1DBF73",
+      "date": "Novembre 2021 - Présent",
+      "points": [
+        "HTML, CSS, JavaScript, React, Next.js, PHP, Node.js, Three.js, Tailwind, Bootstrap",
+        "Développement de solutions web full-stack sur mesure pour divers clients.",
+        "Réalisation de plus de 75 projets avec une note moyenne de 4,9 étoiles sur Fiverr."
+      ]
+    }
+  ]
+}

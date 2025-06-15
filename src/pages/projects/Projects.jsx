@@ -1,15 +1,17 @@
+import { useTranslation } from "react-i18next";
 import { myProjects } from "../../../constants";
 import SplitText from "../../components/react_bits/SplitText";
 import ProjectCard from "./components/ProjectCard";
 
 const Projects = () => {
-
+    const { t, i18n } = useTranslation("common")
     return (
         <div className=" bg-neutral-100 dark:bg-neutral-900 transition-all">
             <section id="hero" className="relative flex flex-col items-start justify-center pt-[calc(clamp(5em,21vh,12em)*.5)] container mx-auto">
                 <div className=" flex flex-col items-center mb-8">
                     <SplitText
-                        text="My Projects"
+                        key={i18n.language}
+                        text={t("my_projects")}
                         className="leading-wide font-semibold text-neutral-900 dark:text-neutral-100 transition-all text-[calc(clamp(3.25em,7vw,8em)*.5)]"
                         delay={100}
                         duration={0.6}
@@ -23,7 +25,7 @@ const Projects = () => {
                     />
                 </div>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-8">
-                    <p className="text-lg lg:text-xl font-medium text-neutral-700 dark:text-neutral-400 tracking-tight">From beautiful marketing websites to fun, intuitive mobile apps, all the way to powerful, data-driven SaaS dashboards that your clients will love to use.</p>
+                    <p className="text-lg lg:text-xl font-medium text-neutral-700 dark:text-neutral-400 tracking-tight">{t("my_projects_desc")}</p>
                 </div>
             </section>
 

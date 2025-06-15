@@ -3,7 +3,7 @@ import { CobeDraggableAuto } from "../../../components/eldoraui/cobeglobeautodra
 import ASCIIText from "../../../components/react_bits/ASCIIText";
 import Folder from "../../../components/react_bits/Folder";
 
-const About = () => {
+const About = ({t}) => {
     return (
         <section className="px-4 md:px-6 my-[calc(clamp(5em,21vh,12em)*.5)] container mx-auto" id="about">
             <div className="grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-full">
@@ -12,9 +12,9 @@ const About = () => {
                         <img src="about/peeps.png" alt="grid-1" className="z-0 w-full sm:h-[276px] h-fit object-contain group-hover:scale-150 transition-all duration-300 drop-shadow-xl" />
 
                         <div className="z-10 bg-neutral-100 dark:bg-neutral-900 sm:p-6 p-4 transition-all">
-                            <p className="grid-headtext text-neutral-900 dark:text-white transition-all">Hi, I’m Nguyen Duc Huy</p>
+                            <p className="grid-headtext text-neutral-900 dark:text-white transition-all">{t("about_name")}</p>
                             <p className="grid-subtext text-neutral-700 dark:text-neutral-400 transition-all">
-                                I create captivating designs by blending aesthetics and technology.
+                                {t("about_name_desc")}
                             </p>
                         </div>
                     </div>
@@ -27,9 +27,9 @@ const About = () => {
                         </div>
 
                         <div className=" z-10 bg-neutral-100 dark:bg-neutral-900 sm:p-6 p-4 transition-all">
-                            <p className="grid-headtext text-neutral-900 dark:text-white transition-all">Flexible communications</p>
+                            <p className="grid-headtext text-neutral-900 dark:text-white transition-all">{t("about_globe")}</p>
                             <p className="grid-subtext text-neutral-700 dark:text-neutral-400 transition-all">
-                                I'm based in France and open to remote work worldwide.
+                                {t("about_globe_desc")}
                             </p>
                         </div>
                     </div>
@@ -41,8 +41,8 @@ const About = () => {
                             <Integrations />
                         </div>
                         <div className=" z-10 bg-neutral-100 dark:bg-neutral-900 sm:p-6 p-4 transition-all" >
-                            <p className="grid-headtext text-neutral-900 dark:text-white transition-all">Tech Stack</p>
-                            <p className="grid-subtext text-neutral-700 dark:text-neutral-400 transition-all">I specialize in a variety of languages, frameworks, and tools that allow me to build robust and scalable applications</p>
+                            <p className="grid-headtext text-neutral-900 dark:text-white transition-all">{t("about_tech_stack")}</p>
+                            <p className="grid-subtext text-neutral-700 dark:text-neutral-400 transition-all">{t("about_tech_stack_desc")}</p>
                         </div>
                     </div>
                 </div>
@@ -58,10 +58,9 @@ const About = () => {
                         </div>
 
                         <div className=" z-10 bg-neutral-100 dark:bg-neutral-900 sm:p-6 p-4 transition-all" >
-                            <p className="grid-headtext text-neutral-900 dark:text-white transition-all">My Passion for Coding</p>
+                            <p className="grid-headtext text-neutral-900 dark:text-white transition-all">{t("about_passion")}</p>
                             <p className="grid-subtext text-neutral-700 dark:text-neutral-400 transition-all">
-                                I love solving problems and building things through code. Programming isn&apos;t just my
-                                profession—it&apos;s my passion.
+                                {t("about_passion_desc")}
                             </p>
                         </div>
                     </div>
@@ -74,8 +73,8 @@ const About = () => {
                         </a>
 
                         <div className="z-10 bg-neutral-100 dark:bg-neutral-900 sm:p-6 p-4 transition-all">
-                            <p className="grid-headtext text-neutral-900 dark:text-white transition-all">My resume</p>
-                            <p className="grid-subtext text-neutral-700 dark:text-neutral-400 transition-all">Click the folder to view it.</p>
+                            <p className="grid-headtext text-neutral-900 dark:text-white transition-all">{t("about_resume")}</p>
+                            <p className="grid-subtext text-neutral-700 dark:text-neutral-400 transition-all">{t("about_resume_desc")}</p>
                         </div>
                     </div>
                 </div>

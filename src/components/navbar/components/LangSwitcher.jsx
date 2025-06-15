@@ -8,13 +8,16 @@ const LANGUAGES = [
     { code: 'fr', label: 'Français', icon: "fi fi-fr" },
 ];
 
-const LangSwitcher = () => {
+const LangSwitcher = ({ t }) => {
     const LANGUAGE_SELECTOR_ID = 'language-selector';
 
     const { i18n } = useTranslation()
 
     const [isOpen, setIsOpen] = useState(false)
-    const [currentLang, setCurrentLang] = useState(LANGUAGES[0])
+    const [currentLang, setCurrentLang] = useState(() => {
+        const detectedLang = i18n.language || window.navigator.language.split("-")[0]
+        return LANGUAGES.find(lang => lang.code === detectedLang) || LANGUAGES[0]
+    })
 
     useEffect(() => {
         const handleWindowClick = (e) => {
@@ -45,9 +48,9 @@ const LangSwitcher = () => {
             className="nav-link group relative hover:!scale-100"
         >
             <div className="absolute -top-12 select-none whitespace-nowrap rounded-lg border border-neutral-200 bg-neutral-100 px-2 py-1 text-sm text-neutral-700 opacity-0 drop-shadow-md transition-all duration-300 group-hover:opacity-100 dark:bg-neutral-800 dark:text-neutral-400">
-                Change Language
+                {t("nav_change_language")}
             </div>
-            <span className={`${currentLang.icon} flag-icon`}></span> 
+            <span className={`${currentLang.icon} flag-icon`}></span>
 
             {
                 isOpen && (

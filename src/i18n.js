@@ -3,7 +3,9 @@ import { initReactI18next } from "react-i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
 
 import common_en from "./locales/en/common.json";
+import exp_en from "./locales/en/experience.json";
 import common_fr from "./locales/fr/common.json";
+import exp_fr from "./locales/fr/experience.json";
 
 i18next
   .use(LanguageDetector)
@@ -21,9 +23,10 @@ i18next
     interpolation: {
       escapeValue: false,
     },
+    ns: ["common", "experience"],
     resources: {
-      en: { common: common_en },
-      fr: { common: common_fr },
+      en: { common: common_en, experience: exp_en },
+      fr: { common: common_fr, experience: exp_fr },
     },
   });
 

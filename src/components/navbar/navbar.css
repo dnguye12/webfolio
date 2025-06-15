@@ -3,5 +3,5 @@
 }
 
 .flag-icon {
-  @apply !bg-cover !w-4/5 !h-4/5 rounded-full
+  @apply !bg-cover !w-3/5 !h-3/5 rounded-full
 }

@@ -5,11 +5,14 @@ import { useState } from "react";
 import { useRef } from "react";
 import { useEffect } from "react";
 import LangSwitcher from "./components/LangSwitcher";
+import { useTranslation } from "react-i18next";
 
 const Navbar = ({theme, toggleTheme}) => {
   const [isAudioPlaying, setIsAudioPlaying] = useState(false);
 
   const audioRef = useRef(null);
+
+  const {t} = useTranslation("common")
 
   const toggleAudioIndicator = () => {
     setIsAudioPlaying((prev) => !prev);
@@ -28,17 +31,17 @@ const Navbar = ({theme, toggleTheme}) => {
       <div className="flex h-full w-full items-end gap-2 py-2">
         <NavbarLink
           href={"/"}
-          tip={"Home"}
+          tip={t("Home")}
           icon={<FontAwesomeIcon icon="fa-solid fa-house-chimney" />}
         />
         <NavbarLink
           href={"/projects"}
-          tip={"Projects"}
+          tip={t("Projects")}
           icon={<FontAwesomeIcon icon="fa-solid fa-computer" />}
         />
         <NavbarLink
           href={"/about-me"}
-          tip={"About me"}
+          tip={t("About_Me")}
           icon={<FontAwesomeIcon icon="fa-solid fa-user" />}
         />
         <Separator.Root
@@ -82,7 +85,7 @@ const Navbar = ({theme, toggleTheme}) => {
             <span className="text-2xl">☀️</span>
           )}
           <div className="absolute -top-12 select-none whitespace-nowrap rounded-lg border border-neutral-200 bg-neutral-100 px-2 py-1 text-sm text-neutral-700 opacity-0 drop-shadow-md transition-all duration-300 group-hover:opacity-100 dark:bg-neutral-800 dark:text-neutral-400">
-            Toggle theme
+            {t("nav_toggle_theme")}
           </div>
         </button>
         <button
@@ -96,10 +99,10 @@ const Navbar = ({theme, toggleTheme}) => {
             <FontAwesomeIcon icon="fa-solid fa-volume-high" />
           )}
           <div className="absolute -top-12 select-none whitespace-nowrap rounded-lg border border-neutral-200 bg-neutral-100 px-2 py-1 text-sm text-neutral-700 opacity-0 drop-shadow-md transition-all duration-300 group-hover:opacity-100 dark:bg-neutral-800 dark:text-neutral-400">
-            Background music
+            {t("nav_background_music")}
           </div>
         </button>
-        <LangSwitcher />
+        <LangSwitcher t={t}/>
       </div>
     </nav>
   );
