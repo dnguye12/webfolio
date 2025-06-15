@@ -5,7 +5,7 @@ import Modal from 'react-modal';
 import Button from "../../../components/shadcn/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const ProjectCard = ({ title, imageUrl, description, summary, tags, features, techStack, liveUrl, sourceCodeUrl }) => {
+const ProjectCard = ({ title, imageUrl, description, summary, tags, features, techStack, liveUrl, sourceCodeUrl, t }) => {
     const [modalIsOpen, setIsOpen] = useState(false)
 
     const openModal = () => {
@@ -53,7 +53,7 @@ const ProjectCard = ({ title, imageUrl, description, summary, tags, features, te
                         {
                             liveUrl && (
                                 <Button className={"bg-neutral-100 text-neutral-900 hover:bg-neutral-100/80"}>
-                                    <a href={liveUrl} target="_blank" >Visit Website<FontAwesomeIcon icon="fa-solid fa-arrow-up-right-from-square" className="ml-1" /></a>
+                                    <a href={liveUrl} target="_blank" >{t("visit_website")}<FontAwesomeIcon icon="fa-solid fa-arrow-up-right-from-square" className="ml-1" /></a>
                                 </Button>
                             )
                         }

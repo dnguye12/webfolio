@@ -6,7 +6,6 @@ import ProjectCard from "./components/ProjectCard";
 const Projects = () => {
     const { t, i18n } = useTranslation("common")
 
-    console.log(i18n.language)
     return (
         <div className=" bg-neutral-100 dark:bg-neutral-900 transition-all">
             <section id="hero" className="relative flex flex-col items-start justify-center pt-[calc(clamp(5em,21vh,12em)*.5)] container mx-auto">
@@ -47,6 +46,7 @@ const Projects = () => {
                                 techStack={project.techStack_fr}
                                 liveUrl={project.liveUrl}
                                 sourceCodeUrl={project.sourceCodeUrl}
+                                t={t}
                             />
                         )
                         :
@@ -62,6 +62,7 @@ const Projects = () => {
                                 techStack={project.techStack_en}
                                 liveUrl={project.liveUrl}
                                 sourceCodeUrl={project.sourceCodeUrl}
+                                t={t}
                             />
                         )
 
