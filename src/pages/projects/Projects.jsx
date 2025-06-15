@@ -5,6 +5,8 @@ import ProjectCard from "./components/ProjectCard";
 
 const Projects = () => {
     const { t, i18n } = useTranslation("common")
+
+    console.log(i18n.language)
     return (
         <div className=" bg-neutral-100 dark:bg-neutral-900 transition-all">
             <section id="hero" className="relative flex flex-col items-start justify-center pt-[calc(clamp(5em,21vh,12em)*.5)] container mx-auto">
@@ -31,18 +33,38 @@ const Projects = () => {
 
             <section className="container mx-auto grid gap-8 grid-cols-1 lg:grid-cols-2 mt-12 mb-[calc(clamp(5em,21vh,12em)*.5)]">
                 {myProjects.map((project) => (
-                    <ProjectCard
-                        key={project.id}
-                        title={project.title}
-                        imageUrl={project.imageUrl}
-                        description={project.description}
-                        summary={project.summary}
-                        tags={project.tags}
-                        features={project.features}
-                        techStack={project.techStack}
-                        liveUrl={project.liveUrl}
-                        sourceCodeUrl={project.sourceCodeUrl}
-                    />
+                    i18n.language === "fr"
+                        ?
+                        (
+                            <ProjectCard
+                                key={project.id}
+                                title={project.title_fr}
+                                imageUrl={project.imageUrl}
+                                description={project.description_fr}
+                                summary={project.summary_fr}
+                                tags={project.tags}
+                                features={project.features_fr}
+                                techStack={project.techStack_fr}
+                                liveUrl={project.liveUrl}
+                                sourceCodeUrl={project.sourceCodeUrl}
+                            />
+                        )
+                        :
+                        (
+                            <ProjectCard
+                                key={project.id}
+                                title={project.title_en}
+                                imageUrl={project.imageUrl}
+                                description={project.description_en}
+                                summary={project.summary_en}
+                                tags={project.tags}
+                                features={project.features_en}
+                                techStack={project.techStack_en}
+                                liveUrl={project.liveUrl}
+                                sourceCodeUrl={project.sourceCodeUrl}
+                            />
+                        )
+
                 ))
                 }
             </section>
