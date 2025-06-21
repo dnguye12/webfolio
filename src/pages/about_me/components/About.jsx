@@ -1,9 +1,8 @@
 import { Integrations } from "../../../components/eldoraui/integrations";
 import { CobeDraggableAuto } from "../../../components/eldoraui/cobeglobeautodraggable";
-import ASCIIText from "../../../components/react_bits/ASCIIText";
 import Folder from "../../../components/react_bits/Folder";
 
-const About = ({t}) => {
+const About = ({ t }) => {
     return (
         <section className="px-4 md:px-6 my-[calc(clamp(5em,21vh,12em)*.5)] container mx-auto" id="about">
             <div className="grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-full">
@@ -49,12 +48,9 @@ const About = ({t}) => {
 
                 <div className="xl:col-span-2 xl:row-span-3">
                     <div className="grid-container bg-neutral-200 dark:bg-neutral-900 transition-all relative justify-end">
-                        <div className="block xl:absolute top-0 w-full h-[276px] xl:h-4/5 grayscale dark:grayscale-0 transition-all">
-                            <ASCIIText
-                                text='Code'
-                                enableWaves={true}
-                                asciiFontSize={8}
-                            />
+                        <div className="flex xl:absolute top-0 w-full h-[276px] xl:h-4/5 grayscale dark:grayscale-0 transition-all justify-center items-center">
+                            <img src="/about/hello-world-ascii.png" className="block dark:hidden h-2/3 w-auto xl:-mt-6" />
+                            <img src="/about/hello-world-ascii-light.png" className="dark:block hidden h-2/3 w-auto xl:-mt-6" />
                         </div>
 
                         <div className=" z-10 bg-neutral-100 dark:bg-neutral-900 sm:p-6 p-4 transition-all" >
@@ -69,7 +65,7 @@ const About = ({t}) => {
                 <div className="xl:col-span-1 xl:row-span-2">
                     <div className="grid-container bg-neutral-200 dark:bg-neutral-900 transition-all relative justify-end">
                         <a href="" target="_blank" className="w-full h-[276px] xl:h-full flex justify-center items-center dark:sm:pt-6 dark:pt-4 transition-all">
-                            <Folder/>
+                            <Folder />
                         </a>
 
                         <div className="z-10 bg-neutral-100 dark:bg-neutral-900 sm:p-6 p-4 transition-all">
