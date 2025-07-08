@@ -2,7 +2,8 @@ import { Integrations } from "../../../components/eldoraui/integrations";
 import { CobeDraggableAuto } from "../../../components/eldoraui/cobeglobeautodraggable";
 import Folder from "../../../components/react_bits/Folder";
 
-const About = ({ t }) => {
+const About = ({ t, i18n }) => {
+
     return (
         <section className="px-4 md:px-6 my-[calc(clamp(5em,21vh,12em)*.5)] container mx-auto" id="about">
             <div className="grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-full">
@@ -64,7 +65,7 @@ const About = ({ t }) => {
 
                 <div className="xl:col-span-1 xl:row-span-2">
                     <div className="grid-container bg-neutral-200 dark:bg-neutral-900 transition-all relative justify-end">
-                        <a href="" target="_blank" className="w-full h-[276px] xl:h-full flex justify-center items-center dark:sm:pt-6 dark:pt-4 transition-all">
+                        <a href={i18n.language === "en" ? "/about/English_CV_Simple.pdf" : "/about/French_CV_Simple.pdf"} target="_blank" className="w-full h-[276px] xl:h-full flex justify-center items-center dark:sm:pt-6 dark:pt-4 transition-all">
                             <Folder />
                         </a>
 

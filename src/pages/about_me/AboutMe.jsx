@@ -28,7 +28,7 @@ const AboutMe = () => {
                 decorative={true}
                 className="SeparatorRoot bg-neutral-200 dark:bg-neutral-700"
             />
-            <About t={t}/>
+            <About t={t} i18n={i18n}/>
             <Separator.Root
                 orientation="horizontal"
                 decorative={true}
