@@ -22,7 +22,7 @@ const ProjectCard = ({ title, imageUrl, description, summary, tags, features, te
                 <div className="p-4 md:p-6">
                     <div className="grid gap-2">
                         <div className="aspect-video z-[2] mb-2 inline-block overflow-hidden rounded-xl" >
-                            <img src={imageUrl} alt={`Image of ${title}`} className="object-cover transition-transform duration-300 drop-shadow-xl" />
+                            <img src={imageUrl} alt={`Image of ${title}`} className="w-full h-full object-cover transition-transform duration-300 drop-shadow-xl" />
                         </div>
 
                         <h2 className="text-xl font-bold text-neutral-900 dark:text-white">{title}</h2>
@@ -42,24 +42,24 @@ const ProjectCard = ({ title, imageUrl, description, summary, tags, features, te
                 isOpen={modalIsOpen}
                 onRequestClose={closeModal}
                 contentLabel={title}
-                className={"container bg-neutral-900 p-6 rounded-lg drop-shadow-md max-w-3xl lg:max-w-5xl xl:max-w-7xl max-h-[calc(100vh-4rem)] overflow-y-auto absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"}
+                className={"container bg-neutral-100 dark:bg-neutral-900 p-6 rounded-lg drop-shadow-md max-w-3xl lg:max-w-5xl xl:max-w-7xl max-h-[calc(100vh-4rem)] overflow-y-auto absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"}
             >
                 <div className=" space-y-6">
                     <div className="flex flex-col gap-3">
-                        <div className="text-3xl font-semibold text-white">{title}</div>
-                        <div className="font-medium text-base text-neutral-400">{summary}</div>
+                        <div className="text-3xl font-semibold text-neutral-900 dark:text-white">{title}</div>
+                        <div className="font-medium text-base text-neutral-700 dark:text-neutral-400">{summary}</div>
                     </div>
                     <div className="flex flex-col items-start gap-2 sm:flex-row sm:gap-4">
                         {
                             liveUrl && (
-                                <Button className={"bg-neutral-100 text-neutral-900 hover:bg-neutral-100/80"}>
+                                <Button className={"bg-neutral-900 text-white hover:bg-neutral-900/80 dark:bg-neutral-100 dark:text-neutral-900 dark:hover:bg-neutral-100/80"}>
                                     <a href={liveUrl} target="_blank" >{t("visit_website")}<FontAwesomeIcon icon="fa-solid fa-arrow-up-right-from-square" className="ml-1" /></a>
                                 </Button>
                             )
                         }
                         {
                             sourceCodeUrl && (
-                                <Button className={"bg-neutral-100 text-neutral-900 hover:bg-neutral-100/80"}>
+                                <Button className={"bg-neutral-900 text-white hover:bg-neutral-900/80 dark:bg-neutral-100 dark:text-neutral-900 dark:hover:bg-neutral-100/80"}>
                                     <a href={sourceCodeUrl} target="_blank" >Github<FontAwesomeIcon icon="fa-brands fa-github" className="ml-1" /></a>
                                 </Button>
                             )
@@ -82,23 +82,23 @@ const ProjectCard = ({ title, imageUrl, description, summary, tags, features, te
                         />
                     )}
                     <div>
-                        <p className="text-white text-base font-medium mb-6">{description}</p>
+                        <p className="text-neutral-900 dark:text-white text-base font-medium mb-6">{description}</p>
 
-                        <h4 className="text-white text-2xl font-semibold mb-2">Features</h4>
+                        <h4 className="text-neutral-900 dark:text-white text-2xl font-semibold mb-2">Features</h4>
                         <ul className="list-disc mb-6">
                             {
                                 features.map((f, i) => (
-                                    <li key={`f-${i}`} className="text-white/80 text-base font-medium ml-6">{f}</li>
+                                    <li key={`f-${i}`} className="text-neutral-700 dark:text-neutral-400 text-base font-medium ml-6">{f}</li>
                                 ))
                             }
                         </ul>
 
-                        <h4 className="text-white text-2xl font-semibold mb-2">Tech Stack</h4>
+                        <h4 className="text-neutral-900 dark:text-white text-2xl font-semibold mb-2">Tech Stack</h4>
                         <ul className="list-disc">
                             {
                                 Object.entries(techStack).map(([k, v], i) => (
-                                    <li key={`ts-${i}`} className="text-white/80 text-base font-medium ml-6">
-                                        <b className="capitalize text-white font-semibold">{k} : </b>{v}
+                                    <li key={`ts-${i}`} className="text-neutral-700 dark:text-neutral-400 text-base font-medium ml-6">
+                                        <b className="capitalize text-neutral-900 dark:text-white font-semibold">{k} : </b>{v}
                                     </li>
                                 ))
                             }
