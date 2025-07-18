@@ -1,5 +1,29 @@
 export const myProjects = [
   {
+    title_en: "AI Image Generator",
+    title_fr: "Générateur d'images IA",
+    imageUrl: "/projects/image_gen.png",
+    summary_en: "Generate images using Artificial Intelligence and a prompt.",
+    summary_fr: "Générer des images à l'aide de l'intelligence artificielle et d'un prompt",
+    tags: ["AI", "React", "Node", "Express", "MongoDB", "Typescript", "TailwindCSS"],
+    features_en: ["Robust AI to generate images", "Database to store images", "Users can share images to each other", "Login system", "Beautiful and modern UI/UX"],
+    features_fr: ["IA robuste pour générer des images", "Base de données pour stocker les images", "Les utilisateurs peuvent partager des images entre eux", "Système de connexion", "UI/UX élégante et moderne"],
+    techStack_en: {
+      frontend: "React, TailwindCSS, ShadCN for a beautiful and easy to use website.",
+      backend: "Node, Express, Typescript to create a performance backend.",
+      database: "MongoDB for storing user data and images.",
+      hosting: "Deployed on Vercel."
+    },
+    techStack_fr: {
+      frontend: "React, TailwindCSS, ShadCN pour un site web attrayant et facile à utiliser.",
+      backend: "Node, Express, TypeScript pour créer un backend performant.",
+      database: "MongoDB pour stocker les données des utilisateurs et les images.",
+      hosting: "Déployé sur Vercel."
+    },
+    liveUrl: "https://ai-image-4n93.onrender.com/",
+    sourceCodeUrl: ""
+  },
+  {
     id: 1,
     title_en: "Portfolio Website",
     title_fr: "Site de portfolio",
@@ -27,7 +51,7 @@ export const myProjects = [
   {
     id: 2,
     title_en: "Dividend Insight (Ongoing)",
-    title_fr: "Analyse des dividendes (en cours)",
+    title_fr: "Dividend Insight (en cours)",
     imageUrl: "/projects/div.png",
     description_en: "A full-stack web application designed to provide investors with real-time company stock information, detailed feedback, price estimations, and comprehensive analysis. The platform integrates AI-powered algorithms, web scraping technology, and interactive data visualizations to deliver actionable insights tailored to user preferences.",
     description_fr: "Une application web full-stack conçue pour fournir aux investisseurs des informations boursières en temps réel, des retours détaillés, des estimations de prix et des analyses complètes. La plateforme intègre des algorithmes alimentés par l'IA, la technologie de web scraping et des visualisations de données interactives pour délivrer des informations exploitables adaptées aux préférences des utilisateurs.",
