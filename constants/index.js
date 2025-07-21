@@ -1,5 +1,31 @@
 export const myProjects = [
   {
+    title_en: "AI Website Generator",
+    title_fr: "Générateur de sites webs IA",
+    imageUrl: "/projects/ai_web.png",
+    summary_en: "Generate functional websites and their code using Artificial Intelligence.",
+    summary_fr: "Générer des sites Web fonctionnels et leur code à l'aide de l'intelligence artificielle.",
+    tags: ["AI", "NextJS", "PostgreSQL", "OpenAI", "Docker", "TRPC", "E2B"],
+    features_en: ["Robust AI to generate websites", "Login and subscription system", "See the code of websites", "Modern and responsive web design."],
+    features_fr: ["IA robuste pour générer des sites Web", "Système de connexion et d'abonnement", "Voir le code des sites Web », « Conception Web moderne et responsive"],
+    techStack_en: {
+      frontend: "NextJS, TailwindCSS, ShadCN.",
+      backend: "NextJS, TRPC, E2B",
+      database: "PostgreSQL, PrismaDB",
+      hosting: "Vercel",
+      AI: "OpenAI"
+    },
+    techStack_fr: {
+      frontend: "NextJS, TailwindCSS, ShadCN.",
+      backend: "NextJS, TRPC, E2B",
+      database: "PostgreSQL, PrismaDB",
+      hosting: "Vercel",
+      IA: "OpenAI"
+    },
+    liveUrl: "https://ai-website-generator-three.vercel.app/",
+    sourceCodeUrl: ""
+  },
+  {
     title_en: "AI Image Generator",
     title_fr: "Générateur d'images IA",
     imageUrl: "/projects/image_gen.png",
