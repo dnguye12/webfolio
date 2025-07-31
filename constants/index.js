@@ -50,6 +50,32 @@ export const myProjects = [
     sourceCodeUrl: ""
   },
   {
+    title_en: "AI Resume/CV Analyser",
+    title_fr: "Analyseur de CV par IA",
+    imageUrl: "/projects/ai_resume.png",
+    summary_en: "Provide feedbacks on submitted CV/Resume using AI",
+    summary_fr: "Fournir des retours sur un CV soumis grâce à l'IA",
+    tags: ["AI", "React", "Node", "Express", "MongoDB", "Typescript", "TailwindCSS"],
+    features_en: ["Separate database for each user", "AI to analyze your CV", "AI Vision to also check for style and readability", "Give tips for improvement", "Modern user interface"],
+    features_fr: ["Base de données distincte pour chaque utilisateur", "IA pour analyser votre CV", "Vision par IA pour vérifier le style et la lisibilité", "Conseils personnalisés d'amélioration", "Interface utilisateur moderne"],
+    techStack_en: {
+      frontend: "React, TailwindCSS, ShadCN for a beautiful and easy to use website.",
+      backend: "Node, Express, Typescript to create a performance backend.",
+      database: "MongoDB for storing user data and images.",
+      hosting: "Deployed on Vercel.",
+      AI: "OpenAI"
+    },
+    techStack_fr: {
+      "frontend": "React, TailwindCSS, ShadCN pour un site web beau et intuitif.",
+      "backend": "Node, Express, TypeScript pour un backend performant.",
+      "database": "MongoDB pour stocker les données des utilisateurs et les CV.",
+      "hosting": "Déployé sur Vercel.",
+      "AI": "OpenAI"
+    },
+    liveUrl: "https://ai-resume-analyser-plum.vercel.app/",
+    sourceCodeUrl: ""
+  },
+  {
     id: 1,
     title_en: "Portfolio Website",
     title_fr: "Site de portfolio",
