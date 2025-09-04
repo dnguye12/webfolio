@@ -8,6 +8,18 @@
       "iconBg": "#FFF9E0",
       "date": "Mars 2024 - Août 2024",
       "points": [
+        "Python, AI, HTML, CSS, Javascript, Figma",
+        "Développement d’un chatbot en temps réel avec LLM et Ollama, intégré comme joueur dans un jeu de société.",
+        "Conception et mise en ligne du site web du projet afin de présenter les résultats et les publications scientifiques."
+      ]
+    },
+    {
+      "title": "Stagiaire",
+      "company_name": "Laboratoire Interdisciplinaire des Sciences du Numérique - Orsay, France",
+      "iconSrc": "lisn.png",
+      "iconBg": "#FFF9E0",
+      "date": "Mars 2024 - Août 2024",
+      "points": [
         "Python, OpenCV, MediaPipe, C#, Unity, Blender, Sockets",
         "Développement d'un agent IA interactif capable d'analyser la reconnaissance des émotions faciales, le suivi du regard et l'estimation des poses.",
         "Implémentation en Python et Unity avec animations 3D, motion capture et synthèse vocale réaliste."

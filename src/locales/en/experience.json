@@ -6,6 +6,18 @@
       "company_name": "Interdisciplinary Laboratory of Digital Sciences - Orsay, France",
       "iconSrc": "lisn.png",
       "iconBg": "#FFF9E0",
+      "date": "July 2025 - September 2025",
+      "points": [
+        "Python, AI, HTML, CSS, Javascript, Figma",
+        "Developed a real-time chatbot using LLM and Ollama to act as a player in a board game.",
+        "Designed and implemented the project website to showcase research results and publications."
+      ]
+    },
+    {
+      "title": "Intern",
+      "company_name": "Interdisciplinary Laboratory of Digital Sciences - Orsay, France",
+      "iconSrc": "lisn.png",
+      "iconBg": "#FFF9E0",
       "date": "March 2024 - August 2024",
       "points": [
         "Python, OpenCV, MediaPipe, C#, Unity, Blender, Sockets",
