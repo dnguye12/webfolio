@@ -42,7 +42,7 @@ const ProjectCard = ({ title, imageUrl, description, summary, tags, features, te
                 isOpen={modalIsOpen}
                 onRequestClose={closeModal}
                 contentLabel={title}
-                className={"container bg-neutral-100 dark:bg-neutral-900 p-6 rounded-lg drop-shadow-md max-w-3xl lg:max-w-5xl xl:max-w-7xl max-h-[calc(100vh-4rem)] overflow-y-auto absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"}
+                className={"container bg-neutral-100 dark:bg-neutral-900 p-6 rounded-lg drop-shadow-md max-w-3xl lg:max-w-5xl xl:max-w-7xl max-h-[calc(100vh-4rem)] overflow-y-auto absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 border"}
             >
                 <div className=" space-y-6">
                     <div className="flex flex-col gap-3">
