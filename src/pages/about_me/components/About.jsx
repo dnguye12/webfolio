@@ -65,7 +65,7 @@ const About = ({ t, i18n }) => {
 
                 <div className="xl:col-span-1 xl:row-span-2">
                     <div className="grid-container bg-neutral-200 dark:bg-neutral-900 transition-all relative justify-end">
-                        <a href={i18n.language === "en" ? "/about/English_CV_Simple.pdf" : "/about/French_CV_Simple.pdf"} target="_blank" className="w-full h-[276px] xl:h-full flex justify-center items-center dark:sm:pt-6 dark:pt-4 transition-all">
+                        <a href={i18n.language === "en" ? "/about/Resume english.pdf" : "/about/Resume french.pdf"} target="_blank" className="w-full h-[276px] xl:h-full flex justify-center items-center dark:sm:pt-6 dark:pt-4 transition-all">
                             <Folder />
                         </a>
 
