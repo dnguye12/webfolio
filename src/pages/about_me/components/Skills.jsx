@@ -123,7 +123,7 @@ const Skills = ({ t, i18n }) => {
                                 </tr>
                                 <tr>
                                     <th>{t("category_databases")}</th>
-                                    <td>MongoDB, Mongoose, Convex, Prisma, MySQL</td>
+                                    <td>PostgreSQL, Drizzle, Prisma, MongoDB, Mongoose</td>
                                 </tr>
                                 <tr>
                                     <th>{t("category_general")}</th>
