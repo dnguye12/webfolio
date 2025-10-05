@@ -58,6 +58,7 @@
   "hero_action_7": "répare",
 
   "my_projects": "Mes projets",
-  "my_projects_desc": "Des sites marketing élégants aux applications mobiles ludiques et intuitives, jusqu’à des tableaux de bord SaaS puissants et pilotés par les données que vos clients adoreront utiliser.",
-  "visit_website": "Visiter la site"
+  "my_projects_desc": "Certains de mes projets dont je suis très fier. Chaque projet met en avant le problème qu’il résout, les technologies utilisées et ce que j’en ai appris. Consultez les images, les sites en ligne et le code source pour découvrir mon approche de l’ergonomie, des performances et d’une ingénierie maintenable.",
+  "visit_website": "Visiter la site",
+  "back_projects": "Retour aux projets"
 }

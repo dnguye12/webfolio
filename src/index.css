@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 @import "./components/navbar/navbar.css";
+@import "./components/embla/embla.css";
 @import "./pages/projects/projects.css";
 @import "./pages/about_me/aboutme.css";
 
@@ -99,4 +100,20 @@ body {
   .copy-container {
     @apply cursor-pointer flex justify-center items-center gap-2;
   }
+}
+
+.project-desc h2 {
+    @apply text-neutral-900 dark:text-white text-2xl font-semibold my-2
+}
+
+.project-desc p {
+  @apply text-neutral-700 dark:text-neutral-400 text-base font-medium
+}
+
+.project-desc ul {
+  @apply list-disc
+}
+
+.project-desc ul li {
+   @apply text-neutral-700 dark:text-neutral-400 text-base font-medium ml-6
 }

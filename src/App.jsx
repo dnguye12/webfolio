@@ -6,6 +6,7 @@ import Navbar from "./components/navbar/Navbar";
 import useTheme from "./hooks/useTheme";
 import TransitionProvider from "./components/transition/TransitionProvider";
 import "flag-icons/css/flag-icons.min.css";
+import ProjectPage from "./pages/project/ProjectPage";
 
 const App = () => {
     const { theme, toggleTheme } = useTheme()
@@ -18,6 +19,7 @@ const App = () => {
                 <Routes>
                     <Route index element={<Home theme={theme} toggleTheme={toggleTheme} />}></Route>
                     <Route path="/projects" element={<Projects />}></Route>
+                    <Route path="/projects/:slug" element={<ProjectPage />}></Route> 
                     <Route path="/about-me" element={<AboutMe />}></Route>
                 </Routes>
                 <Navbar theme={theme} toggleTheme={toggleTheme} />

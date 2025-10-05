@@ -57,6 +57,7 @@
   "hero_action_7": "repairs",
 
   "my_projects": "My Projects",
-  "my_projects_desc": "From beautiful marketing websites to fun, intuitive mobile apps, all the way to powerful, data-driven SaaS dashboards that your clients will love to use.",
-  "visit_website": "Visit Website"
+  "my_projects_desc": "Some of my projects that I am very proud of. Each project highlights the problem it solves, the technologies used, and what I learnt from it. See images, live websites, and source code to see how I approach usability, performance, and maintainable engineering.",
+  "visit_website": "Visit Website",
+  "back_projects": "Back to projects"
 }

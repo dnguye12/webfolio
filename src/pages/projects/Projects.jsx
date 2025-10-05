@@ -42,11 +42,7 @@ const Projects = () => {
                                 description={project.description_fr}
                                 summary={project.summary_fr}
                                 tags={project.tags}
-                                features={project.features_fr}
-                                techStack={project.techStack_fr}
-                                liveUrl={project.liveUrl}
-                                sourceCodeUrl={project.sourceCodeUrl}
-                                t={t}
+                                slug={project.slug}
                             />
                         )
                         :
@@ -58,11 +54,7 @@ const Projects = () => {
                                 description={project.description_en}
                                 summary={project.summary_en}
                                 tags={project.tags}
-                                features={project.features_en}
-                                techStack={project.techStack_en}
-                                liveUrl={project.liveUrl}
-                                sourceCodeUrl={project.sourceCodeUrl}
-                                t={t}
+                                slug={project.slug}
                             />
                         )
 

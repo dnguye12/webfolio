@@ -19,6 +19,8 @@
     "@react-three/fiber": "^9.1.2",
     "autoprefixer": "^10.4.21",
     "cobe": "^0.6.4",
+    "embla-carousel-autoplay": "8.6.0",
+    "embla-carousel-react": "^8.6.0",
     "flag-icons": "^7.5.0",
     "gsap": "^3.13.0",
     "i18next": "^25.2.1",
