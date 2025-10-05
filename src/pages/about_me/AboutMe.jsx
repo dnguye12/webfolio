@@ -21,7 +21,7 @@ const AboutMe = () => {
     }, [location])
 
     return (
-        <div className=" bg-neutral-100 dark:bg-neutral-900 transition-all w-screen overflow-x-hidden">
+        <div className=" bg-neutral-100 dark:bg-neutral-900 transition-all overflow-x-hidden">
             <Hero t={t}/>
             <Separator.Root
                 orientation="horizontal"

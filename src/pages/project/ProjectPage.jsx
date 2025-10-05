@@ -34,7 +34,7 @@ const ProjectPage = () => {
 
     return (
         <div className=" bg-neutral-100 dark:bg-neutral-900 transition-all">
-            <section className="relative flex flex-col items-start justify-center py-[calc(clamp(5em,21vh,12em)*.5)] container max-w-5xl mx-auto px-8">
+            <section className="relative flex flex-col items-start justify-center pt-8 lg:pt-20 pb-20 container max-w-5xl mx-auto px-3">
                 <Link to="/projects">
                     <Button className={"mb-6 hover:bg-neutral-200 dark:text-neutral-400 dark:hover:text-white dark:hover:bg-neutral-800"}>
                         <FontAwesomeIcon icon="fa-solid fa-caret-left" className="mr-1" />{t("back_projects")}

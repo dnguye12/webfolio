@@ -14,7 +14,7 @@ const App = () => {
     return (
         <TransitionProvider>
             <h1 className=" sr-only">Nguyen Duc Huy. Freelancer Web developer.</h1>
-            <main className="relative mx-auto my-0 flex min-h-screen flex-col overflow-x-hidden">
+            <main className="relative mx-auto my-0 flex min-h-screen flex-col">
 
                 <Routes>
                     <Route index element={<Home theme={theme} toggleTheme={toggleTheme} />}></Route>

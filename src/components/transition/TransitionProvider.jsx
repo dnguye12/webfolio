@@ -42,12 +42,12 @@ const TransitionProvider = ({ children }) => {
 
     return (
         <>
-        {
-active && (
-    <div className="absolute w-screen h-screen top-0 left-0 bg-neutral-100 dark:bg-neutral-700 z-[100]"></div>
-)
-        }
-            
+            {
+                active && (
+                    <div className="hidden sm:block absolute w-screen h-screen top-0 left-0 bg-neutral-100 dark:bg-neutral-700 z-[100]"></div>
+                )
+            }
+
             <AnimatePresence
                 mode="wait"
             >
@@ -58,7 +58,7 @@ active && (
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         transition={{ duration: base * 0.5, ease }}
-                        className={`min-h-screen w-screen`}
+                        className={`min-h-screen`}
 
                     >
                         {children}

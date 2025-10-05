@@ -7,13 +7,13 @@ const Projects = () => {
     const { t, i18n } = useTranslation("common")
 
     return (
-        <div className=" bg-neutral-100 dark:bg-neutral-900 transition-all">
-            <section id="hero" className="relative flex flex-col items-start justify-center pt-[calc(clamp(5em,21vh,12em)*.5)] container mx-auto">
+        <div className=" bg-neutral-100 dark:bg-neutral-900 transition-all px-3">
+            <section id="hero" className="relative flex flex-col items-start justify-center pt-8 lg:pt-20 container mx-auto">
                 <div className=" flex flex-col items-center mb-8">
                     <SplitText
                         key={i18n.language}
                         text={t("my_projects")}
-                        className="leading-wide font-semibold text-neutral-900 dark:text-neutral-100 transition-all text-[calc(clamp(3.25em,7vw,8em)*.5)]"
+                        className="leading-wide font-semibold text-neutral-900 dark:text-neutral-100 transition-all text-4xl lg:text-6xl"
                         delay={100}
                         duration={0.6}
                         ease="power3.out"
@@ -30,7 +30,7 @@ const Projects = () => {
                 </div>
             </section>
 
-            <section className="container mx-auto grid gap-8 grid-cols-1 lg:grid-cols-2 mt-12 mb-[calc(clamp(5em,21vh,12em)*.5)]">
+            <section className="container mx-auto grid gap-8 grid-cols-1 lg:grid-cols-2 mt-12 mb-24 lg:mb-20">
                 {myProjects.map((project) => (
                     i18n.language === "fr"
                         ?

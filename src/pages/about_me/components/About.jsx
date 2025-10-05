@@ -5,7 +5,7 @@ import Folder from "../../../components/react_bits/Folder";
 const About = ({ t, i18n }) => {
 
     return (
-        <section className="px-4 md:px-6 my-[calc(clamp(5em,21vh,12em)*.5)] container mx-auto" id="about">
+        <section className="px-4 md:px-6 my-8 lg:my-20 container mx-auto" id="about">
             <div className="grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-full">
                 <div className="col-span-1 xl:row-span-3 group">
                     <div className="grid-container bg-neutral-200 dark:bg-[#CCD7D6] transition-all">
