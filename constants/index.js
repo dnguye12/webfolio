@@ -81,6 +81,73 @@ export const myProjects = [
     sourceCodeUrl: ""
   },
   {
+    slug: "mistral",
+    title_en: "Mistral AI Chat",
+    title_fr: "Mistral AI Chat",
+    imageUrl: "/projects/chat_cat.png",
+    summary_en: "Full stack AI chat application using Mistral AI API, part of my application for an internship at Mistral.",
+    summary_fr: "Application de chat IA full-stack utilisant l’API de Mistral AI, dans le cadre de ma candidature à un stage chez Mistral.",
+    tags: ["NextJS", "PostgreSQL", "AI", "Drizzle"],
+    page_desc_en: `
+    <h2>Project description</h2>
+    <p>
+    Full stack AI chat application using Mistral AI API. This project was made as part of my application for an internship in the role of a software engineer at Mistral. 
+    </p>
+    <br/>
+    <h2>Features</h2>
+    <ul>
+      <li>Chat completion</li>
+      <li>Persistent chat history</li>
+      <li>Edit and branching system</li>
+      <li>Voice mode/speech-to-text messages</li>
+      <li>Image and PDF files support</li>
+    </ul>
+    <br/>
+    <h2>Tech Stack</h2>
+    <ul>
+      <li><b>Frontend : </b>NextJS, TailwindCSS, ShadCN</li>
+      <li><b>Backend : </b>NextJS</li>
+      <li><b>Database : </b>PostgreSQL, Drizzle ORM</li>
+      <li><b>AI : </b>Mistral AI</li>
+    </ul>
+    `,
+    page_desc_fr: `
+    <h2>Description du projet</h2>
+    <p>
+      Application de chat IA full-stack utilisant l’API de Mistral AI.
+      Ce projet a été réalisé dans le cadre de ma candidature à un stage
+      au poste d’ingénieur logiciel chez Mistral.
+    </p>
+    <br/>
+    <h2>Fonctionnalités</h2>
+    <ul>
+      <li>Complétion de chat</li>
+      <li>Historique de conversation persistant</li>
+      <li>Édition et système de branches</li>
+      <li>Mode voix / messages dictés (speech-to-text)</li>
+      <li>Prise en charge des images et des fichiers PDF</li>
+    </ul>
+    <br/>
+    <h2>Stack technique</h2>
+    <ul>
+      <li><b>Frontend&nbsp;: </b>NextJS, TailwindCSS, ShadCN</li>
+      <li><b>Backend&nbsp;: </b>NextJS</li>
+      <li><b>Base de données&nbsp;: </b>PostgreSQL, Drizzle ORM</li>
+      <li><b>IA&nbsp;: </b>Mistral AI</li>
+    </ul>
+  `,
+    images: [
+      "https://i.ibb.co/wh52Chkh/01.jpg",
+      "https://i.ibb.co/zhwDhH8P/02.jpg",
+      "https://i.ibb.co/TMrmR725/03.jpg",
+      "https://i.ibb.co/qMmgzMnF/04.jpg",
+      "https://i.ibb.co/67B71HMN/05.jpg",
+      "https://i.ibb.co/cSvJ7MCS/06.jpg",
+    ],
+    liveUrl: "https://cat-chat-rust.vercel.app/about",
+    sourceCodeUrl: "https://github.com/dnguye12/Cat-Chat"
+  },
+  {
     slug: "ai-image-gen",
     title_en: "AI Image Generator",
     title_fr: "Générateur d'images IA",
