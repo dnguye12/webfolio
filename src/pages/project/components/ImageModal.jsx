@@ -25,7 +25,7 @@ const ImageModal = ({ src, alt = "", open, onClose }) => {
     }
 
     return (
-        <div role="dialog" className="hidden sm:fixed inset-0 z-[1000]">
+        <div role="dialog" className="hidden sm:block fixed inset-0 z-[1000]">
             <div className="absolute inset-0 bg-black/50 backdrop-blur-xl"
                 onClick={onClose}>
             </div>
