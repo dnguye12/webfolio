@@ -2,19 +2,35 @@
   "Experience": "Mes Parcours Professionels",
   "experiences": [
     {
-      "title": "Stagiaire",
+      "title": "Stagiaire Développeur Full-Stack",
+      "company_name": "Coderpad - Montpellier, France",
+      "iconSrc": "coderpad.webp",
+      "iconBg": "#D91629",
+      "date": "Mars 2026 - Septembre 2026",
+      "points": [
+        "JavaScript, TypeScript, React, Java, MUI, JUnit tests",
+        "Participation au développement d'une plateforme d'entretiens techniques.",
+        "Travail sur le front-end et le back-end avec React et Java.",
+        "Participation aux discussions techniques avec l'équipe pour choisir des solutions maintenables et adaptées aux besoins du produit.",
+        "Contribution à la conception de parcours utilisateurs clairs et performants.",
+        "Amélioration de la qualité du code grâce aux tests et aux échanges techniques."
+      ]
+    },
+    {
+      "title": "Stagiaire Développeur",
       "company_name": "Laboratoire Interdisciplinaire des Sciences du Numérique - Orsay, France",
       "iconSrc": "lisn.png",
       "iconBg": "#FFF9E0",
       "date": "Juin 2025 - Août 2025",
       "points": [
-        "Python, AI, HTML, CSS, Javascript, Figma",
-        "Développement d’un chatbot en temps réel avec LLM et Ollama, intégré comme joueur dans un jeu de société.",
-        "Conception et mise en ligne du site web du projet afin de présenter les résultats et les publications scientifiques."
+        "Next.js, Tailwind CSS, Payload CMS, Storybook",
+        "Développement d’un site de recherche pour présenter des publications, des résultats et du contenu scientifique.",
+        "Création de pages claires et accessibles pour les chercheurs et les visiteurs.",
+        " Intégration de Payload CMS pour permettre à l’équipe de publier et mettre à jour le contenu sans aide d’un développeur."
       ]
     },
     {
-      "title": "Stagiaire",
+      "title": "Stagiaire Développeur",
       "company_name": "Laboratoire Interdisciplinaire des Sciences du Numérique - Orsay, France",
       "iconSrc": "lisn.png",
       "iconBg": "#FFF9E0",
@@ -33,8 +49,10 @@
       "date": "Février 2023 - Janvier 2024",
       "points": [
         "Figma, React, Axios, Tailwind CSS",
-        "Conception et implémentation d'un nouveau système administratif de gestion d'entreprise (design UI/UX, développement front-end).",
-        "Création d'une interface intuitive et ergonomique, réduisant les erreurs système et améliorant l'efficacité administrative."
+        "Participation à la refonte et au développement d’un système d’administration.",
+        "Intégration des composants front-end avec les services back-end pour l’affichage des données et l’envoi des formulaires.",
+        "Transformation de maquettes Figma en interfaces propres et fonctionnelles",
+        "Création d’une bibliothèque de composants réutilisables avec Storybook."
       ]
     },
     {
@@ -44,9 +62,11 @@
       "iconBg": "#1DBF73",
       "date": "Novembre 2021 - Présent",
       "points": [
-        "HTML, CSS, JavaScript, React, Next.js, PHP, Node.js, Three.js, Tailwind, Bootstrap",
-        "Développement de solutions web full-stack sur mesure pour divers clients.",
-        "Réalisation de plus de 75 projets avec une note moyenne de 4,9 étoiles sur Fiverr."
+        "JavaScript, React, Next.js, Node.js, Tailwind, PostgreSQL, MongoDB",
+        "Réalisation de plus de 75 solutions web avec une note de 4,9/5 sur Fiverr.",
+        "Gestion des projets de bout en bout : analyse des besoins, planification technique, développement, tests, déploiement et communication client.",
+        "Adaptation des solutions selon la taille des projets, les délais et le budget.",
+        "Construction de relations de confiance grâce à une communication claire et à des livraisons fiables."
       ]
     }
   ]

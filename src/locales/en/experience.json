@@ -2,19 +2,35 @@
   "Experience": "Experience",
   "experiences": [
     {
-      "title": "Intern",
+      "title": "Fullstack Developer Intern",
+      "company_name": "Coderpad - Montpellier, France",
+      "iconSrc": "coderpad.webp",
+      "iconBg": "#D91629",
+      "date": "March 2026 - September 2026",
+      "points": [
+        "JavaScript, TypeScript, React, Java, MUI, JUnit tests",
+        "Developed features for an online coding interview platform.",
+        "Worked on both frontend and backend using React and Java.",
+        "Built and improved user interfaces for interview and assessment flows.",
+        "Worked with the engineering team to choose simple and maintainable solutions.",
+        "Improved code quality through code reviews, testing and team discussions."
+      ]
+    },
+    {
+      "title": "Developer Intern",
       "company_name": "Interdisciplinary Laboratory of Digital Sciences - Orsay, France",
       "iconSrc": "lisn.png",
       "iconBg": "#FFF9E0",
       "date": "June 2025 - August 2025",
       "points": [
-        "Python, AI, HTML, CSS, Javascript, Figma",
-        "Developed a real-time chatbot using LLM and Ollama to act as a player in a board game.",
-        "Designed and implemented the project website to showcase research results and publications."
+        "Next.js, Tailwind CSS, Payload CMS, Storybook",
+        "Built a research website to present publications, results and scientific content.",
+        "Created clear and accessible pages for researchers and visitors.",
+        "Integrated Payload CMS so the team can publish and update content without developer help."
       ]
     },
     {
-      "title": "Intern",
+      "title": "Developer Intern",
       "company_name": "Interdisciplinary Laboratory of Digital Sciences - Orsay, France",
       "iconSrc": "lisn.png",
       "iconBg": "#FFF9E0",
@@ -32,9 +48,11 @@
       "iconBg": "#FFF",
       "date": "February 2023 - January 2024",
       "points": [
-        "Figma, React, Axios, Tailwind CSS",
-        "Designed and built a new company administration system, covering both UI/UX design and front-end development.",
-        "Delivered an intuitive, ergonomic interface that reduced system errors and improved administrative efficiency."
+        "React, Tailwind CSS, Figma, Storybook",
+        "Redesign and rebuild an administration system.",
+        "Connected frontend components to backend APIs for data display and form submission.",
+        "Turned Figma designs into clean and functional interfaces.",
+        "Built and documented reusable UI components with Storybook."
       ]
     },
     {
@@ -44,9 +62,11 @@
       "iconBg": "#1DBF73",
       "date": "November 2021 - Present",
       "points": [
-        "HTML, CSS, JavaScript, React, Next.js, PHP, Node.js, Three.js, Tailwind, Bootstrap",
-        "Developed web solutions for a diverse client base, handling everything from front-end to back-end.",
-        "Completed over 75 projects with an average rating of 4.9 stars on Fiverr."
+        "JavaScript, React, Next.js, Node.js, Tailwind CSS, PostgreSQL, MongoDB",
+        "Delivered 75+ custom web solutions with a 4.9-star rating on Fiverr.",
+        "Managed projects from end to end: requirement analysis, technical planning, development, testing, deployment and client communication.",
+        "Adapted technical solutions for different budgets and project sizes.",
+        "Maintained good client relationships through clear communication and reliable delivery."
       ]
     }
   ]
