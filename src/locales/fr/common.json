@@ -33,8 +33,8 @@
   
   "table_categories": "Catégories",
   "table_technologies": "Technologies",
-  "category_frontend": "Développement Front-end",
-  "category_backend": "Développement Back-end",
+  "category_frontend": "Front-end",
+  "category_backend": "Back-end",
   "category_databases": "Bases de données",
   "category_general": "Programmation générale",
   "category_tools": "Autres outils de programmation",
