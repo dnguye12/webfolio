@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router";
+import { Navigate, Route, Routes } from "react-router";
 import Home from "./pages/home/Home";
 import Projects from "./pages/projects/Projects"
 import AboutMe from "./pages/about_me/AboutMe"
@@ -21,6 +21,7 @@ const App = () => {
                     <Route path="/projects" element={<Projects />}></Route>
                     <Route path="/projects/:slug" element={<ProjectPage />}></Route> 
                     <Route path="/about-me" element={<AboutMe />}></Route>
+                    <Route path="*" element={<Navigate to="/" replace />}></Route>
                 </Routes>
                 <Navbar theme={theme} toggleTheme={toggleTheme} />
 
