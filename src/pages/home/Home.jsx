@@ -11,9 +11,10 @@ import CharacterSVG from "./components/CharacterSVG";
 import { Link } from "react-router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Hamster from "./components/Hamster";
+import PageSEO from "../../components/seo/PageSeo";
 
 
-const Home = ({theme, toggleTheme}) => {
+const Home = ({ theme, toggleTheme }) => {
   const [currentTime, setCurrentTime] = useState(moment().format("hh:mm:ss"));
   const [width, setWidth] = useState(window.innerWidth);
   const [height, setHeight] = useState(window.innerHeight);
@@ -50,6 +51,11 @@ const Home = ({theme, toggleTheme}) => {
 
   return (
     <>
+      <PageSEO
+        title={t("seo.home.title")}
+        description={t("seo.home.description")}
+        path="/"
+      />
       <div className="pointer-events-none absolute left-0 top-0 z-10 h-screen w-screen homeOverlay transition-all duration-[1000ms]"></div>
       <div className="z-0 h-screen cursor-grab touch-none bg-neutral-100 dark:bg-neutral-900 transition-all duration-[1000ms]">
         <div
@@ -66,7 +72,7 @@ const Home = ({theme, toggleTheme}) => {
           >
             <p className="text-xl mb-2 font-semibold text-neutral-900 dark:text-neutral-100">{t("home_dark_mode")}</p>
             <label className="switch">
-              <input className="cb" type="checkbox" onChange={toggleTheme} checked={theme === "dark"}/>
+              <input className="cb" type="checkbox" onChange={toggleTheme} checked={theme === "dark"} />
               <span className="toggle">
                 <span className="left">off</span>
                 <span className="right">on</span>

@@ -59,5 +59,12 @@
   "my_projects": "My Projects",
   "my_projects_desc": "Some of my projects that I am very proud of. Each project highlights the problem it solves, the technologies used, and what I learnt from it. See images, live websites, and source code to see how I approach usability, performance, and maintainable engineering.",
   "visit_website": "Visit Website",
-  "back_projects": "Back to projects"
+  "back_projects": "Back to projects",
+
+  "seo.home.title": "Nguyen Duc Huy | Freelance Web Developer",
+  "seo.home.description": "Portfolio of Nguyen Duc Huy — freelance web developer based in France, specializing in React, Node.js, and AI-powered applications.",
+  "seo.about.title": "About Me | Nguyen Duc Huy",
+  "seo.about.description": "Learn more about Nguyen Duc Huy — his experience, skills, and passion for building web applications.",
+  "seo.projects.title": "Projects | Nguyen Duc Huy",
+  "seo.projects.description": "Browse all projects by Nguyen Duc Huy, including AI tools, full-stack web apps, and more."
 }

@@ -6,10 +6,11 @@ import Skills from "./components/Skills";
 import { useLocation } from "react-router";
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
+import PageSEO from "../../components/seo/PageSeo";
 
 const AboutMe = () => {
     const location = useLocation()
-    const {t, i18n} = useTranslation("common")
+    const { t, i18n } = useTranslation("common")
 
     useEffect(() => {
 
@@ -21,32 +22,39 @@ const AboutMe = () => {
     }, [location])
 
     return (
-        <div className=" bg-neutral-100 dark:bg-neutral-900 transition-all overflow-x-hidden">
-            <Hero t={t}/>
-            <Separator.Root
-                orientation="horizontal"
-                decorative={true}
-                className="SeparatorRoot bg-neutral-200 dark:bg-neutral-700"
+        <>
+            <PageSEO
+                title={t("seo.about.title")}
+                description={t("seo.about.description")}
+                path="/about-me"
             />
-            <About t={t} i18n={i18n}/>
-            <Separator.Root
-                orientation="horizontal"
-                decorative={true}
-                className="SeparatorRoot bg-neutral-200 dark:bg-neutral-700"
-            />
-            <Experience/>
-            <Separator.Root
-                orientation="horizontal"
-                decorative={true}
-                className="SeparatorRoot bg-neutral-200 dark:bg-neutral-700"
-            />
-            <Skills t={t} i18n={i18n}/>
-            <Separator.Root
-                orientation="horizontal"
-                decorative={true}
-                className="SeparatorRoot bg-neutral-200 dark:bg-neutral-700"
-            />
-        </div>
+            <div className=" bg-neutral-100 dark:bg-neutral-900 transition-all overflow-x-hidden">
+                <Hero t={t} />
+                <Separator.Root
+                    orientation="horizontal"
+                    decorative={true}
+                    className="SeparatorRoot bg-neutral-200 dark:bg-neutral-700"
+                />
+                <About t={t} i18n={i18n} />
+                <Separator.Root
+                    orientation="horizontal"
+                    decorative={true}
+                    className="SeparatorRoot bg-neutral-200 dark:bg-neutral-700"
+                />
+                <Experience />
+                <Separator.Root
+                    orientation="horizontal"
+                    decorative={true}
+                    className="SeparatorRoot bg-neutral-200 dark:bg-neutral-700"
+                />
+                <Skills t={t} i18n={i18n} />
+                <Separator.Root
+                    orientation="horizontal"
+                    decorative={true}
+                    className="SeparatorRoot bg-neutral-200 dark:bg-neutral-700"
+                />
+            </div>
+        </>
     );
 }
 
