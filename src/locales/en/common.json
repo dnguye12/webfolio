@@ -66,5 +66,10 @@
   "seo.about.title": "About Me | Nguyen Duc Huy",
   "seo.about.description": "Learn more about Nguyen Duc Huy — his experience, skills, and passion for building web applications.",
   "seo.projects.title": "Projects | Nguyen Duc Huy",
-  "seo.projects.description": "Browse all projects by Nguyen Duc Huy, including AI tools, full-stack web apps, and more."
+  "seo.projects.description": "Browse all projects by Nguyen Duc Huy, including AI tools, full-stack web apps, and more.",
+
+  "not_found_code": "404",
+  "not_found_title": "Page Not Found",
+  "not_found_desc": "The page you're looking for doesn't exist or has been moved.",
+  "not_found_back": "Back to Homepage"
 }

@@ -67,5 +67,10 @@
   "seo.about.title": "À propos | Nguyen Duc Huy",
   "seo.about.description": "En savoir plus sur Nguyen Duc Huy — son expérience, ses compétences et sa passion pour le développement web.",
   "seo.projects.title": "Projets | Nguyen Duc Huy",
-  "seo.projects.description": "Parcourez tous les projets de Nguyen Duc Huy : outils IA, applications web full-stack, et plus encore."
+  "seo.projects.description": "Parcourez tous les projets de Nguyen Duc Huy : outils IA, applications web full-stack, et plus encore.",
+
+  "not_found_code": "404",
+  "not_found_title": "Page introuvable",
+  "not_found_desc": "La page que vous recherchez n'existe pas ou a été déplacée.",
+  "not_found_back": "Retour à l'accueil"
 }
