@@ -36,5 +36,6 @@ ${urlEntries}
 </urlset>`;
 
 const outPath = resolve(__dirname, "../public/sitemap.xml");
+const distPath = resolve(__dirname, "../dist/sitemap.xml")
 writeFileSync(outPath, sitemap, "utf-8");
 console.log(`Sitemap written to ${outPath} with ${allRoutes.length} URLs.`);
