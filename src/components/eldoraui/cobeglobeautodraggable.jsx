@@ -1,11 +1,12 @@
 import createGlobe from "cobe";
-import { useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useSpring } from "react-spring";
 
 export function CobeDraggableAuto() {
     const canvasRef = useRef();
     const pointerInteracting = useRef(null);
     const pointerInteractionMovement = useRef(0);
+    const [failed, setFailed] = useState(false)
     const [{ r }, api] = useSpring(() => ({
         r: 0,
         config: {
@@ -22,38 +23,57 @@ export function CobeDraggableAuto() {
             canvasRef.current && (width = canvasRef.current.offsetWidth);
         window.addEventListener("resize", onResize);
         onResize();
-        const globe = createGlobe(canvasRef.current, {
-            devicePixelRatio: 2,
-            width: width * 2,
-            height: width * 2,
-            phi: 0,
-            theta: 0.3,
-            dark: 1,
-            diffuse: 3,
-            mapSamples: 16000,
-            mapBrightness: 1.2,
-            baseColor: [1, 1, 1],
-            markerColor: [251 / 255, 100 / 255, 21 / 255],
-            glowColor: [1.2, 1.2, 1.2],
-            markers: [],
-            onRender: (state) => {
-                // This prevents rotation while dragging
-                if (!pointerInteracting.current) {
-                    // Called on every animation frame.
-                    // `state` will be an empty object, return updated params.
-                    phi += 0.005;
-                }
-                state.phi = phi + r.get();
-                state.width = width * 2;
-                state.height = width * 2;
-            },
-        });
+
+        const test = document.createElement('canvas')
+        const gl = test.getContext("webgl") || test.getContext("experimental-webgl");
+        if (!gl) {
+            setFailed(true)
+            return
+        }
+        let globe
+        try {
+            globe = createGlobe(canvasRef.current, {
+                devicePixelRatio: 2,
+                width: width * 2,
+                height: width * 2,
+                phi: 0,
+                theta: 0.3,
+                dark: 1,
+                diffuse: 3,
+                mapSamples: 16000,
+                mapBrightness: 1.2,
+                baseColor: [1, 1, 1],
+                markerColor: [251 / 255, 100 / 255, 21 / 255],
+                glowColor: [1.2, 1.2, 1.2],
+                markers: [],
+                onRender: (state) => {
+                    // This prevents rotation while dragging
+                    if (!pointerInteracting.current) {
+                        // Called on every animation frame.
+                        // `state` will be an empty object, return updated params.
+                        phi += 0.005;
+                    }
+                    state.phi = phi + r.get();
+                    state.width = width * 2;
+                    state.height = width * 2;
+                },
+            });
+        } catch {
+            setFailed(true)
+            return
+        }
+
         setTimeout(() => (canvasRef.current.style.opacity = "1"));
         return () => {
             globe.destroy();
             window.removeEventListener("resize", onResize);
         };
     }, []);
+
+    if (failed) {
+        return null
+    }
+
     return (
         <div
             style={{
